@@ -1,0 +1,10 @@
+c:\users\syed inkisar ahmed\documents\visual studio 2010\Projects\Erp Petrolpump Management\Erp Petrolpump Management\bin\Debug\Erp Petrolpump Management.exe
+c:\users\syed inkisar ahmed\documents\visual studio 2010\Projects\Erp Petrolpump Management\Erp Petrolpump Management\bin\Debug\Erp Petrolpump Management.pdb
+c:\users\syed inkisar ahmed\documents\visual studio 2010\Projects\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\syed inkisar ahmed\documents\visual studio 2010\Projects\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.Form1.resources
+c:\users\syed inkisar ahmed\documents\visual studio 2010\Projects\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.Properties.Resources.resources
+c:\users\syed inkisar ahmed\documents\visual studio 2010\Projects\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\syed inkisar ahmed\documents\visual studio 2010\Projects\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\syed inkisar ahmed\documents\visual studio 2010\Projects\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp Petrolpump Management.exe
+c:\users\syed inkisar ahmed\documents\visual studio 2010\Projects\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp Petrolpump Management.pdb
+C:\Users\Syed Inkisar Ahmed\Documents\Visual Studio 2010\Projects\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.Wellcome_Page.resources
