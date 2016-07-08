@@ -55,6 +55,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Insertion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insertion.Designer.cs">
+      <DependentUpon>Insertion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -62,6 +68,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchEmployDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchEmployDetail.Designer.cs">
+      <DependentUpon>SearchEmployDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VeiwAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VeiwAll.Designer.cs">
+      <DependentUpon>VeiwAll.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wellcome Page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +88,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insertion.resx">
+      <DependentUpon>Insertion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,6 +102,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SearchEmployDetail.resx">
+      <DependentUpon>SearchEmployDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VeiwAll.resx">
+      <DependentUpon>VeiwAll.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wellcome Page.resx">
       <DependentUpon>Wellcome Page.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +142,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\btn-6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-8.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

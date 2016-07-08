@@ -101,5 +101,19 @@ namespace Erp_Petrolpump_Management.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        internal static System.Drawing.Bitmap Untitled_7 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Untitled_8 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

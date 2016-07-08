@@ -8,3 +8,16 @@ c:\users\syed inkisar ahmed\documents\visual studio 2010\Projects\Erp Petrolpump
 c:\users\syed inkisar ahmed\documents\visual studio 2010\Projects\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp Petrolpump Management.exe
 c:\users\syed inkisar ahmed\documents\visual studio 2010\Projects\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp Petrolpump Management.pdb
 C:\Users\Syed Inkisar Ahmed\Documents\Visual Studio 2010\Projects\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.Wellcome_Page.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp Petrolpump Management.exe
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp Petrolpump Management.pdb
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\bin\Debug\Erp Petrolpump Management.exe
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\bin\Debug\Erp Petrolpump Management.pdb
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.Form1.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.Properties.Resources.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.Wellcome_Page.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.Insertion.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.VeiwAll.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.SearchEmployDetail.resources

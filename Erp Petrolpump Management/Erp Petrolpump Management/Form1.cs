@@ -13,12 +13,21 @@ namespace Erp_Petrolpump_Management
     public partial class Form1 : Form
     {
         String password="password.dat";
+        String tempos, pssword;
         public Form1()
         {
             InitializeComponent();
         }
         public void btn10() {
             button10.Show();
+        }
+        public void clearall() {
+
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+
         }
         void btn1() {
 
@@ -29,15 +38,14 @@ namespace Erp_Petrolpump_Management
             textBox2.Hide();
             textBox3.Hide();
             textBox4.Hide();
-            textBox5.Hide();
-            textBox6.Hide();
+            
             button1.Show();
             button6.Hide();
             button7.Hide();
             button8.Hide();
             button9.Hide();
             button10.Hide();
-            button11.Hide();
+            
             label2.Hide();
             
 
@@ -51,6 +59,11 @@ namespace Erp_Petrolpump_Management
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            using (TextReader tr = File.OpenText(@"username.txt"))
+            {
+                label1.Text = tr.ReadLine();
+
+            }
             if (File.Exists(password))
             {
                 disable();
@@ -70,20 +83,7 @@ namespace Erp_Petrolpump_Management
             
             
             
-            using(TextWriter bb = File.CreateText("username.txt")){
-               bb.Write("Bakhtiyar");
-               
-           }
-
-            label1.Text = "";
-            String username;
-           if(File.Exists("username.txt")){
-                using(TextReader b = File.OpenText("username.txt")){
-                  
-                 username  =  b.ReadLine();
-                 label1.Text = username;
-                }
-           }
+            
            textBox1.Hide();
            button6.Hide();
             if(File.Exists(password)){
@@ -109,12 +109,13 @@ namespace Erp_Petrolpump_Management
 
         private void button6_Click(object sender, EventArgs e)
         {
-            String temp=textBox1.Text;
+            tempos=textBox1.Text;
             
             
             using(BinaryReader bb = new BinaryReader(File.Open(password,FileMode.Open))){
-                password = bb.ReadString();
-                if (temp.Equals(password))
+             
+                pssword = bb.ReadString();
+                if (pssword.Equals(tempos,StringComparison.Ordinal))
                 {
                     bb.Close();
                     disable();
@@ -149,9 +150,13 @@ namespace Erp_Petrolpump_Management
                 using (TextWriter bb = File.CreateText("username.txt"))
                 {
                     bb.Write(user);
+                   
                     bb.Close();
                     textBox2.Clear();
-                    label1.Text = user;
+                 using(TextReader tr = File.OpenText(@"username.txt")){
+                     label1.Text = tr.ReadLine();
+                 
+                 }   
 
                 }
             
@@ -186,16 +191,16 @@ namespace Erp_Petrolpump_Management
             }
             else
             {
-                if (File.Exists(password))
+                if (File.Exists(password)==true)
                 {
                     MessageBox.Show("Password already exist");
                     textBox3.Clear();
                 }
-                else
+                else if(!File.Exists(password))
                 {
                     using (BinaryWriter writ = new BinaryWriter(File.Open(password, FileMode.OpenOrCreate)))
                     {
-                        writ.Seek(0,0);
+                        //writ.Seek(0,0);
                         writ.Write(pswrd);
                         textBox3.Clear();
                         textBox3.Hide();
@@ -217,9 +222,7 @@ namespace Erp_Petrolpump_Management
             disable();
             btn1();
             btn10();
-            textBox5.Show();
-            textBox6.Show();
-            button11.Show();
+           
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -236,21 +239,26 @@ namespace Erp_Petrolpump_Management
         {
             if (File.Exists(password))
             {
-                using(BinaryReader read = new BinaryReader(File.Open(password,FileMode.Open))){
-                String rem = textBox4.Text;
-                String dlt = read.ReadString();
-                if (dlt.Equals(rem,StringComparison.OrdinalIgnoreCase))
+                using (BinaryReader read = new BinaryReader(File.Open(password, FileMode.Open)))
                 {
-                    read.Close();
-                    File.Delete("password.dat");
-                    button9.Hide();
-                    textBox4.Hide();
-                    label2.Hide();
+                    String rem = textBox4.Text;
+                    String dlt = read.ReadString();
+                    if (dlt.Equals(rem, StringComparison.OrdinalIgnoreCase))
+                    {
+                        read.Close();
+                        File.Delete("password.dat");
+                        button9.Hide();
+                        textBox4.Hide();
+                        label2.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("you have entered wrong password");
+                    }
                 }
-                else {
-                    MessageBox.Show("you have entered wrong password");
-                }
-              }
+            }
+            else {
+                MessageBox.Show("There is no password");
             }
         }
 
@@ -271,56 +279,20 @@ namespace Erp_Petrolpump_Management
 
         private void button11_Click(object sender, EventArgs e)
         {
-            try{
-                String tex = textBox5.Text;
-                String wrt = textBox6.Text;
             
-                if (File.Exists(password))
-                {
-                    using (BinaryReader bin = new BinaryReader(File.Open(password, FileMode.Open)))
-                    {
-                        String temp = bin.ReadString();
-                        if (temp.Equals(tex, StringComparison.OrdinalIgnoreCase))
-                        {
-                            bin.Close();
-                            File.Delete(password);
-                            using (BinaryWriter wt = new BinaryWriter(File.Open(password, FileMode.OpenOrCreate)))
-                            {
-                                wt.Seek(0, 0);
-                                if (wrt.Equals(" ", StringComparison.OrdinalIgnoreCase) || wrt.Length < 8)
-                                {
-                                    textBox6.Clear();
-                                    wt.Close();
-
-                                }
-                                else
-                                {
-                                    wt.Write(wrt);
-                                    wt.Close();
-
-                                }
-                            }
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("you entered wrong password");
-
-                        }
-
-
-                    }
-                }
-                else {
-                    MessageBox.Show("no password");
-                }
-            }
-            catch(Exception ex){
-            MessageBox.Show("correct the input");
-            }
 
             
             
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            clearall();
+        }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
