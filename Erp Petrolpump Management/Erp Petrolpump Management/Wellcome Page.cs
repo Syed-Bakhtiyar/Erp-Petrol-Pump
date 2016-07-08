@@ -43,7 +43,9 @@ namespace Erp_Petrolpump_Management
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            UpdateRecordsPage up = new UpdateRecordsPage();
+            this.Hide();
+            up.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -51,6 +53,20 @@ namespace Erp_Petrolpump_Management
             VeiwAll read = new VeiwAll();
             this.Hide();
             read.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SearchEmployDetail sr = new SearchEmployDetail();
+            this.Hide();
+            sr.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Deleterecordspage dl = new Deleterecordspage();
+            this.Hide();
+            dl.Show();
         }
     }
 }

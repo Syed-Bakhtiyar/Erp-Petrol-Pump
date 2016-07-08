@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Deleterecordspage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deleterecordspage.Designer.cs">
+      <DependentUpon>Deleterecordspage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,12 @@
     <Compile Include="SearchEmployDetail.Designer.cs">
       <DependentUpon>SearchEmployDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateRecordsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRecordsPage.Designer.cs">
+      <DependentUpon>UpdateRecordsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="VeiwAll.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +98,9 @@
     <Compile Include="Wellcome Page.Designer.cs">
       <DependentUpon>Wellcome Page.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Deleterecordspage.resx">
+      <DependentUpon>Deleterecordspage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +119,9 @@
     </Compile>
     <EmbeddedResource Include="SearchEmployDetail.resx">
       <DependentUpon>SearchEmployDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRecordsPage.resx">
+      <DependentUpon>UpdateRecordsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VeiwAll.resx">
       <DependentUpon>VeiwAll.cs</DependentUpon>

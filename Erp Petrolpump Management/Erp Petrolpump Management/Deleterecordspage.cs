@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Erp_Petrolpump_Management
 {
-    public partial class SearchEmployDetail : Form
+    public partial class Deleterecordspage : Form
     {
-        public SearchEmployDetail()
+        public Deleterecordspage()
         {
             InitializeComponent();
         }

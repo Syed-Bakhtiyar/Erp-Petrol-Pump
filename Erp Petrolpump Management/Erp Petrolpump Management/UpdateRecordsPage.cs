@@ -9,21 +9,21 @@ using System.Windows.Forms;
 
 namespace Erp_Petrolpump_Management
 {
-    public partial class SearchEmployDetail : Form
+    public partial class UpdateRecordsPage : Form
     {
-        public SearchEmployDetail()
+        public UpdateRecordsPage()
         {
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
             Wellcome_Page wl = new Wellcome_Page();
             this.Hide();
             wl.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
