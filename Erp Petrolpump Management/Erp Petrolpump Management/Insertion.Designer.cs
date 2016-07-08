@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -63,8 +63,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -73,8 +71,6 @@
             // 
             this.groupBox2.Controls.Add(this.textBox8);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.button9);
-            this.groupBox2.Controls.Add(this.button8);
             this.groupBox2.Controls.Add(this.button7);
             this.groupBox2.Controls.Add(this.textBox17);
             this.groupBox2.Controls.Add(this.label17);
@@ -96,37 +92,36 @@
             this.groupBox2.Text = "For Sale purchase Expence profit Loss Record";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // button9
+            // textBox8
             // 
-            this.button9.Location = new System.Drawing.Point(320, 101);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 26;
-            this.button9.Text = "Ok";
-            this.button9.UseVisualStyleBackColor = true;
+            this.textBox8.Location = new System.Drawing.Point(178, 132);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(124, 20);
+            this.textBox8.TabIndex = 28;
             // 
-            // button8
+            // label9
             // 
-            this.button8.Location = new System.Drawing.Point(320, 70);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 25;
-            this.button8.Text = "Ok";
-            this.button8.UseVisualStyleBackColor = true;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(7, 133);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(158, 13);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Date in Number like this 001122";
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(320, 38);
+            this.button7.Location = new System.Drawing.Point(227, 164);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 24;
-            this.button7.Text = "Ok";
+            this.button7.Text = "Submit";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // textBox17
             // 
             this.textBox17.Enabled = false;
-            this.textBox17.Location = new System.Drawing.Point(178, 217);
+            this.textBox17.Location = new System.Drawing.Point(178, 314);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(124, 20);
             this.textBox17.TabIndex = 23;
@@ -134,7 +129,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(7, 218);
+            this.label17.Location = new System.Drawing.Point(7, 315);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(49, 13);
             this.label17.TabIndex = 22;
@@ -143,7 +138,7 @@
             // textBox18
             // 
             this.textBox18.Enabled = false;
-            this.textBox18.Location = new System.Drawing.Point(178, 161);
+            this.textBox18.Location = new System.Drawing.Point(178, 258);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(124, 20);
             this.textBox18.TabIndex = 21;
@@ -151,7 +146,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(7, 162);
+            this.label18.Location = new System.Drawing.Point(7, 259);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(55, 13);
             this.label18.TabIndex = 20;
@@ -176,7 +171,7 @@
             // textBox20
             // 
             this.textBox20.Enabled = false;
-            this.textBox20.Location = new System.Drawing.Point(178, 187);
+            this.textBox20.Location = new System.Drawing.Point(178, 284);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(124, 20);
             this.textBox20.TabIndex = 17;
@@ -184,7 +179,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(7, 188);
+            this.label20.Location = new System.Drawing.Point(7, 285);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(41, 13);
             this.label20.TabIndex = 16;
@@ -380,7 +375,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(965, 343);
+            this.button2.Location = new System.Drawing.Point(1020, 307);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(133, 54);
             this.button2.TabIndex = 25;
@@ -390,30 +385,13 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(965, 412);
+            this.button3.Location = new System.Drawing.Point(1020, 394);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(133, 54);
             this.button3.TabIndex = 26;
             this.button3.Text = "Exit";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // textBox8
-            // 
-            this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(178, 132);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(124, 20);
-            this.textBox8.TabIndex = 28;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 133);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(158, 13);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Date in Number like this 001122";
             // 
             // Insertion
             // 
@@ -438,8 +416,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Label label17;
