@@ -23,3 +23,5 @@ C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp
 C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.SearchEmployDetail.resources
 C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.UpdateRecordsPage.resources
 C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.Deleterecordspage.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\bin\Debug\Database1.accdb
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\bin\Debug\Erp Petrolpump Management.exe.config
