@@ -60,7 +60,9 @@ namespace Erp_Petrolpump_Management
             catch (Exception ex) { }
 
             
-            try {age = Int16.Parse(textBox2.Text);
+            try {
+            age = Int16.Parse(textBox2.Text);
+                if(age>15&&age<75)
             arr[1] = 1;
             }
             catch(Exception ex){}
@@ -71,18 +73,31 @@ namespace Erp_Petrolpump_Management
             }catch(Exception ex){}
             email = textBox5.Text;
             
+            
+            
+            name = textBox1.Text;
+            fathername = textBox7.Text;
+           
+            phone = textBox6.Text;
+            arr[5] = 1;
+            
+            
+            
             if (email.IndexOf('@') == -1 || email.IndexOf('.') == -1)
             {
                 arr[3] = 0;
             }
             else { arr[3] = 1; }
+
+
+            if(!(fathername.Equals(name,StringComparison.Ordinal))){
+                arr[4] = 1;
+                arr[6] = 1;
+            }
             
-            fathername = textBox7.Text;
-            arr[4] = 1;
-            phone = textBox6.Text;
-            arr[5] = 1;
-            name = textBox1.Text;
-            arr[6] = 1;
+            
+            
+            
             if(arr[0]==0){
                 MessageBox.Show("Enter Correct Salary");
                 textBox3.Clear();
@@ -102,21 +117,14 @@ namespace Erp_Petrolpump_Management
                 MessageBox.Show("Enter Correct Email");
                 textBox5.Clear();
             }
-            if (arr[4] == 0)
+            
+            if (arr[4] == 0||arr[6]==0)
             {
-                MessageBox.Show("Enter Correct Salary");
-                textBox3.Clear();
+                MessageBox.Show("Match Name and Father Name");
+                textBox1.Clear();
+                textBox7.Clear();
             }
-            if (arr[5] == 0)
-            {
-                MessageBox.Show("Enter Correct Salary");
-                textBox3.Clear();
-            }
-            if (arr[6] == 0)
-            {
-                MessageBox.Show("Enter Correct Salary");
-                textBox3.Clear();
-            }
+            
                 
                
                 if(arr[0]==1&&arr[1]==1&&arr[2]==1&&arr[3]==1&&arr[4]==1&&arr[5]==1&&arr[6]==1){
