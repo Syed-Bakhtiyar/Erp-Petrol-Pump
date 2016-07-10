@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox1);
@@ -49,12 +51,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Delete Box";
             // 
-            // textBox1
+            // button1
             // 
-            this.textBox1.Location = new System.Drawing.Point(468, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(21, 73);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(547, 186);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Delete ?";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -66,15 +72,12 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Enter Employ NIC to Delete Employ Record From Data Base";
             // 
-            // button1
+            // textBox1
             // 
-            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(21, 73);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(547, 186);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Delete ?";
-            this.button1.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(468, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 0;
             // 
             // button4
             // 
@@ -95,6 +98,17 @@
             this.button3.Text = "Back";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(20, 260);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(547, 186);
+            this.button2.TabIndex = 35;
+            this.button2.Text = "Delete All Records From Table";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Deleterecordspage
             // 
@@ -120,5 +134,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -118,6 +118,7 @@
             this.button6.TabIndex = 38;
             this.button6.Text = "Update";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -127,6 +128,7 @@
             this.button5.TabIndex = 37;
             this.button5.Text = "Update";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -136,6 +138,7 @@
             this.button4.TabIndex = 36;
             this.button4.Text = "Update";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -145,6 +148,7 @@
             this.button3.TabIndex = 35;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -154,6 +158,7 @@
             this.button2.TabIndex = 34;
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox9
             // 
@@ -395,6 +400,7 @@
             this.button10.TabIndex = 53;
             this.button10.Text = "Update";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -404,6 +410,7 @@
             this.button11.TabIndex = 52;
             this.button11.Text = "Update";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -413,6 +420,7 @@
             this.button12.TabIndex = 51;
             this.button12.Text = "Update";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // textBox23
             // 
@@ -493,6 +501,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "UpdateRecordsPage";
             this.Text = "UpdateRecordsPage";
+            this.Load += new System.EventHandler(this.UpdateRecordsPage_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);

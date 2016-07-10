@@ -16,6 +16,7 @@ namespace Erp_Petrolpump_Management
         {
             InitializeComponent();
         }
+        public int[] arr = new int[7];
         public string name, fathername, phone, email;
         public int age, nic;
         public long dtm;
@@ -45,28 +46,21 @@ namespace Erp_Petrolpump_Management
 
         private void button1_Click(object sender, EventArgs e)
         {
+            for (int i=0;i<arr.Length ;i++ ) {
+                arr[i] = 0;
+            }
             try
             {
                 name = textBox1.Text;
+                arr[0] = 1;
                 fathername = textBox7.Text;
+                arr[1] = 1;
                 email = textBox5.Text;
                 phone = textBox6.Text;
                 salary = Double.Parse(textBox3.Text);
                 age = Int16.Parse(textBox2.Text);
                 nic = Int16.Parse(textBox4.Text);
-               // int count = 0;
-              /*  for (int i=0;i<phone.Length ;i++ )
-                {
-                    if(email.ElementAt(i)!='@'){
-                        count++;
-                    }
-                }
-
-
-
-                if (true) { }
-                else
-                {*/
+               
 
                     OleDbCommand cmd = new OleDbCommand("INSERT into EmployRecord(Nic, Name, Age,Salary, FatherName, Email, Phone) Values('" + nic + "', '" + name + "', '" + age + "', '" + salary + "', '" + fathername + "', '" + email + "', '" + phone + "') ", con);
                     con.Open();
