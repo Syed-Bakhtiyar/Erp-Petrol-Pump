@@ -49,19 +49,78 @@ namespace Erp_Petrolpump_Management
             for (int i=0;i<arr.Length ;i++ ) {
                 arr[i] = 0;
             }
+        
+            
             try
             {
-                name = textBox1.Text;
-                arr[0] = 1;
-                fathername = textBox7.Text;
-                arr[1] = 1;
-                email = textBox5.Text;
-                phone = textBox6.Text;
                 salary = Double.Parse(textBox3.Text);
-                age = Int16.Parse(textBox2.Text);
-                nic = Int16.Parse(textBox4.Text);
-               
+                
+                arr[0] = 1;
+            }
+            catch (Exception ex) { }
 
+            
+            try {age = Int16.Parse(textBox2.Text);
+            arr[1] = 1;
+            }
+            catch(Exception ex){}
+
+            try {
+                nic = Int16.Parse(textBox4.Text);
+                arr[2] = 1;
+            }catch(Exception ex){}
+            email = textBox5.Text;
+            
+            if (email.IndexOf('@') == -1 || email.IndexOf('.') == -1)
+            {
+                arr[3] = 0;
+            }
+            else { arr[3] = 1; }
+            
+            fathername = textBox7.Text;
+            arr[4] = 1;
+            phone = textBox6.Text;
+            arr[5] = 1;
+            name = textBox1.Text;
+            arr[6] = 1;
+            if(arr[0]==0){
+                MessageBox.Show("Enter Correct Salary");
+                textBox3.Clear();
+            }
+            if (arr[1] == 0)
+            {
+                MessageBox.Show("Enter Correct Age");
+                textBox2.Clear();
+            }
+            if (arr[2] == 0)
+            {
+                MessageBox.Show("Enter Correct Nic");
+                textBox4.Clear();
+            }
+            if (arr[3] == 0)
+            {
+                MessageBox.Show("Enter Correct Email");
+                textBox5.Clear();
+            }
+            if (arr[4] == 0)
+            {
+                MessageBox.Show("Enter Correct Salary");
+                textBox3.Clear();
+            }
+            if (arr[5] == 0)
+            {
+                MessageBox.Show("Enter Correct Salary");
+                textBox3.Clear();
+            }
+            if (arr[6] == 0)
+            {
+                MessageBox.Show("Enter Correct Salary");
+                textBox3.Clear();
+            }
+                
+               
+                if(arr[0]==1&&arr[1]==1&&arr[2]==1&&arr[3]==1&&arr[4]==1&&arr[5]==1&&arr[6]==1){
+                    try{
                     OleDbCommand cmd = new OleDbCommand("INSERT into EmployRecord(Nic, Name, Age,Salary, FatherName, Email, Phone) Values('" + nic + "', '" + name + "', '" + age + "', '" + salary + "', '" + fathername + "', '" + email + "', '" + phone + "') ", con);
                     con.Open();
                     cmd.ExecuteNonQuery();
@@ -72,10 +131,11 @@ namespace Erp_Petrolpump_Management
                     textBox5.Clear();
                     textBox6.Clear();
                     textBox7.Clear();
+                    MessageBox.Show("insert successfully");
                     con.Close();
                 //}
             }catch(Exception ex){
-                MessageBox.Show("Please correct your input");
+                MessageBox.Show("connection failed :(");
                 textBox1.Clear();
                 textBox2.Clear();
                 textBox3.Clear();
@@ -86,7 +146,7 @@ namespace Erp_Petrolpump_Management
                 
             
             }
-                       
+          }
         }
 
         private void button7_Click(object sender, EventArgs e)
