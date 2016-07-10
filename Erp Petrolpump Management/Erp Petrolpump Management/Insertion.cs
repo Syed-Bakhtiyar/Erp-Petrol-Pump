@@ -157,14 +157,9 @@ namespace Erp_Petrolpump_Management
                     con.Close();
                 //}
             }catch(Exception ex){
-                MessageBox.Show("connection failed :(");
-                textBox1.Clear();
-                textBox2.Clear();
-                textBox3.Clear();
+                MessageBox.Show("Nic must be diffrent from others :/ Got it?");
+                
                 textBox4.Clear();
-                textBox5.Clear();
-                textBox6.Clear();
-                textBox7.Clear();
                 
             
             }
@@ -210,10 +205,15 @@ namespace Erp_Petrolpump_Management
                 textBox19.Clear();
             }
             double totalp = sale - expence;
-            OleDbCommand cmd = new OleDbCommand("INSERT into SallingDetail(Dates, Purchasing, Salling, OtherExpence, TotalBudget ) Values('"+dtm+"', '"+purchase+"', '"+sale+"','"+expence+"', '"+totalp+"')",con);
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
+            try
+            {
+                OleDbCommand cmd = new OleDbCommand("INSERT into SallingDetail(Dates, Purchasing, Salling, OtherExpence, TotalBudget ) Values('" + dtm + "', '" + purchase + "', '" + sale + "','" + expence + "', '" + totalp + "')", con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }catch(Exception ex){
+                MessageBox.Show("Date must be diffrent from others :/ Got it?");
+            }
             
             
             
@@ -233,6 +233,29 @@ namespace Erp_Petrolpump_Management
         private void button4_Click(object sender, EventArgs e)
         {
             clearall();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter please number only");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter type only number like this 2232016 or 21213");
+                e.KeyChar = (char)0;
+            }
         }
     }
 }

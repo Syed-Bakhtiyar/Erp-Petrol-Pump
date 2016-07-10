@@ -32,19 +32,14 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -63,7 +58,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -73,14 +67,8 @@
             this.groupBox2.Controls.Add(this.textBox8);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.button7);
-            this.groupBox2.Controls.Add(this.textBox17);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.textBox18);
-            this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.textBox19);
             this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.textBox20);
-            this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.textBox21);
             this.groupBox2.Controls.Add(this.label21);
             this.groupBox2.Controls.Add(this.textBox22);
@@ -96,9 +84,11 @@
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(178, 132);
+            this.textBox8.MaxLength = 8;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(124, 20);
             this.textBox8.TabIndex = 28;
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // label9
             // 
@@ -119,40 +109,6 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // textBox17
-            // 
-            this.textBox17.Enabled = false;
-            this.textBox17.Location = new System.Drawing.Point(178, 314);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(124, 20);
-            this.textBox17.TabIndex = 23;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(7, 315);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(49, 13);
-            this.label17.TabIndex = 22;
-            this.label17.Text = "Expence";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Enabled = false;
-            this.textBox18.Location = new System.Drawing.Point(178, 258);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(124, 20);
-            this.textBox18.TabIndex = 21;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(7, 259);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(55, 13);
-            this.label18.TabIndex = 20;
-            this.label18.Text = "Total Sale";
-            // 
             // textBox19
             // 
             this.textBox19.Location = new System.Drawing.Point(178, 101);
@@ -168,23 +124,6 @@
             this.label19.Size = new System.Drawing.Size(78, 13);
             this.label19.TabIndex = 18;
             this.label19.Text = "Other Expence";
-            // 
-            // textBox20
-            // 
-            this.textBox20.Enabled = false;
-            this.textBox20.Location = new System.Drawing.Point(178, 284);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(124, 20);
-            this.textBox20.TabIndex = 17;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(7, 285);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(41, 13);
-            this.label20.TabIndex = 16;
-            this.label20.Text = "Budget";
             // 
             // textBox21
             // 
@@ -243,6 +182,16 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "For Employ";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(272, 294);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "Clear";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label8
             // 
@@ -319,6 +268,8 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(160, 20);
             this.textBox4.TabIndex = 7;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // label4
             // 
@@ -397,16 +348,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(272, 294);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Clear";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // Insertion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -431,14 +372,8 @@
 
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textBox22;

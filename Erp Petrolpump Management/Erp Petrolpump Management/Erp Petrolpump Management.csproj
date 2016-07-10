@@ -66,11 +66,23 @@
     <Compile Include="Deleterecordspage.Designer.cs">
       <DependentUpon>Deleterecordspage.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteSalling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteSalling.Designer.cs">
+      <DependentUpon>DeleteSalling.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
     </Compile>
     <Compile Include="Insertion.cs">
       <SubType>Form</SubType>
@@ -115,8 +127,14 @@
     <EmbeddedResource Include="Deleterecordspage.resx">
       <DependentUpon>Deleterecordspage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeleteSalling.resx">
+      <DependentUpon>DeleteSalling.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Insertion.resx">
       <DependentUpon>Insertion.cs</DependentUpon>
@@ -194,6 +212,8 @@
     <None Include="Resources\Untitled-8.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\Untitled-7.jpg" />
+    <None Include="bin\Debug\Untitled-8.jpg" />
     <Content Include="Database1.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

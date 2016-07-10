@@ -35,24 +35,32 @@ namespace Erp_Petrolpump_Management
         {
             
             
-             rec= Int16.Parse(textBox1.Text);
-             OleDbCommand read = new OleDbCommand("Select * from EmployRecord WHERE Nic="+rec+"", con);
+             rec= Int32.Parse(textBox1.Text);
+             try
+             {
+                 OleDbCommand read = new OleDbCommand("Select * from EmployRecord WHERE Nic=" + rec + "", con);
 
-             OleDbDataAdapter a = new OleDbDataAdapter();
-             a.SelectCommand = read;
-             DataTable dt = new DataTable();
-             a.Fill(dt);
-             BindingSource bs = new BindingSource();
-             bs.DataSource = dt;
-             dataGridView1.DataSource = bs;
-             a.Update(dt);
-                
+                 OleDbDataAdapter a = new OleDbDataAdapter();
+                 a.SelectCommand = read;
+                 DataTable dt = new DataTable();
+                 a.Fill(dt);
+                 BindingSource bs = new BindingSource();
+                 bs.DataSource = dt;
+                 dataGridView1.DataSource = bs;
+                 a.Update(dt);
+             }
+            catch(Exception ex){
+                MessageBox.Show("correct nic");
+                textBox1.Clear();
+
+            
+            }
             
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            rec = Int16.Parse(textBox2.Text);
+            rec = Int32.Parse(textBox2.Text);
             OleDbCommand read = new OleDbCommand("Select * from SallingDetail WHERE Dates=" + rec + "", con);
 
             OleDbDataAdapter a = new OleDbDataAdapter();
@@ -62,6 +70,41 @@ namespace Erp_Petrolpump_Management
             BindingSource bs = new BindingSource();
             bs.DataSource = dt;
             dataGridView2.DataSource = bs;
+            textBox2.Clear();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter type only number");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter type only number like this 2232016 or 21213");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void SearchEmployDetail_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

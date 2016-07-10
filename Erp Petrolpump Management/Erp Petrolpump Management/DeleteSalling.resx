@@ -117,35 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btn-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\btn-5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\btn-4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn-6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\btn-6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Erp picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Erp picture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\btn-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Untitled-71" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Untitled-7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\btn-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Untitled-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled-7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Untitled-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled-8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Untitled-81" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Untitled-8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

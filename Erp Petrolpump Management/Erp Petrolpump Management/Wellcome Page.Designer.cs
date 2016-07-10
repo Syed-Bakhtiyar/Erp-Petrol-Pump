@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -51,6 +53,25 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "What do you Want?\r\nbelow is depend on your choice :)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // button9
+            // 
+            this.button9.Image = global::Erp_Petrolpump_Management.Properties.Resources.Untitled_81;
+            this.button9.Location = new System.Drawing.Point(13, 270);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(177, 79);
+            this.button9.TabIndex = 10;
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button8
+            // 
+            this.button8.Image = global::Erp_Petrolpump_Management.Properties.Resources.Untitled_71;
+            this.button8.Location = new System.Drawing.Point(572, 270);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(177, 79);
+            this.button8.TabIndex = 9;
+            this.button8.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -136,6 +157,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 714);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -165,5 +188,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }
