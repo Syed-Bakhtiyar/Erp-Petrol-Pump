@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Text.RegularExpressions;
 namespace Erp_Petrolpump_Management
 {
     public partial class Insertion : Form
@@ -21,6 +22,16 @@ namespace Erp_Petrolpump_Management
         public int age, nic;
         public long dtm;
         public double salary,purchase,sale,expence;
+        public void clearall(){
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
+            textBox7.Clear();
+        
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -124,6 +135,9 @@ namespace Erp_Petrolpump_Management
                 textBox1.Clear();
                 textBox7.Clear();
             }
+            if(arr[5]==0){
+                MessageBox.Show("Invalid phone number");
+            }
             
                 
                
@@ -205,6 +219,20 @@ namespace Erp_Petrolpump_Management
             
 
 
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            if (e.KeyChar < '0' || e.KeyChar > '9') {
+                MessageBox.Show("Enter please number only");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            clearall();
         }
     }
 }
