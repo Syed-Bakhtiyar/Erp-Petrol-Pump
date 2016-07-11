@@ -75,5 +75,26 @@ namespace Erp_Petrolpump_Management
             this.Hide();
             hl.Show();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Events ev = new Events();
+            this.Hide();
+            ev.Show();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            BossVeiw bs = new BossVeiw();
+            this.Hide();
+            bs.Show();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            PrintPageForm pr = new PrintPageForm();
+            this.Hide();
+            pr.Show();
+        }
     }
 }

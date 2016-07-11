@@ -49,10 +49,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BossVeiw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BossVeiw.Designer.cs">
+      <DependentUpon>BossVeiw.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database1DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteEvents.Designer.cs">
+      <DependentUpon>DeleteEvents.cs</DependentUpon>
     </Compile>
     <Compile Include="DeleteForm.cs">
       <SubType>Form</SubType>
@@ -71,6 +83,12 @@
     </Compile>
     <Compile Include="DeleteSalling.Designer.cs">
       <DependentUpon>DeleteSalling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events.Designer.cs">
+      <DependentUpon>Events.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -94,6 +112,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintPageForm.Designer.cs">
+      <DependentUpon>PrintPageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,6 +145,12 @@
     <Compile Include="Wellcome Page.Designer.cs">
       <DependentUpon>Wellcome Page.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BossVeiw.resx">
+      <DependentUpon>BossVeiw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteEvents.resx">
+      <DependentUpon>DeleteEvents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteForm.resx">
       <DependentUpon>DeleteForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +160,9 @@
     <EmbeddedResource Include="DeleteSalling.resx">
       <DependentUpon>DeleteSalling.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Events.resx">
+      <DependentUpon>Events.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Insertion.resx">
       <DependentUpon>Insertion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPageForm.resx">
+      <DependentUpon>PrintPageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -214,6 +250,10 @@
   <ItemGroup>
     <None Include="bin\Debug\Untitled-7.jpg" />
     <None Include="bin\Debug\Untitled-8.jpg" />
+    <None Include="bin\Debug\Untitled12.jpg" />
+    <None Include="bin\Debug\Untitled-222.jpg" />
+    <None Include="bin\Debug\boss.jpg" />
+    <None Include="bin\Debug\pr.jpg" />
     <Content Include="Database1.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -257,5 +257,55 @@ namespace Erp_Petrolpump_Management
                 e.KeyChar = (char)0;
             }
         }
+
+        private void textBox22_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter type only number");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox21_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter type only number");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox19_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter type only number");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter please number only");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter please number only");
+                e.KeyChar = (char)0;
+            }
+        }
     }
 }

@@ -60,6 +60,13 @@ namespace Erp_Petrolpump_Management.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap boss {
+            get {
+                object obj = ResourceManager.GetObject("boss", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap btn_2 {
             get {
                 object obj = ResourceManager.GetObject("btn-2", resourceCulture);
@@ -102,6 +109,20 @@ namespace Erp_Petrolpump_Management.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap pr {
+            get {
+                object obj = ResourceManager.GetObject("pr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Untitled_222 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-222", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Untitled_7 {
             get {
                 object obj = ResourceManager.GetObject("Untitled-7", resourceCulture);
@@ -126,6 +147,13 @@ namespace Erp_Petrolpump_Management.Properties {
         internal static System.Drawing.Bitmap Untitled_81 {
             get {
                 object obj = ResourceManager.GetObject("Untitled-81", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Untitled12 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled12", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
