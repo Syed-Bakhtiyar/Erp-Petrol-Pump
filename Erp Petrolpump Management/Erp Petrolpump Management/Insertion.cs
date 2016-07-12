@@ -21,7 +21,7 @@ namespace Erp_Petrolpump_Management
         public string name, fathername, phone, email;
         public int age, nic;
         public long dtm;
-        public double salary, purchase, sale, expence, litre = 1, ltrr;
+        public double salary, purchase, sale, expence, litre = 1, ltrr,stock;
         public void clearall(){
             textBox1.Clear();
             textBox2.Clear();
@@ -213,22 +213,34 @@ namespace Erp_Petrolpump_Management
             catch (Exception ex) {
                 MessageBox.Show("Form must fill");
             }
+
             double lp = litre*purchase;
-            double totalp = sale - expence;
-            try
+            double totalp = sale * litre;
+            stock = purchase - sale;
+            if (sale < purchase == true)
             {
-                OleDbCommand cmd = new OleDbCommand("INSERT into SallingDetail(Dates, Purchasing, Salling, OtherExpence, TotalBudget, LitrePrice, Litre) Values('" + dtm + "', '" + lp + "', '" + sale + "','" + expence + "', '" + totalp + "', '"+litre+"', '"+ltrr+"')", con);
-                con.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Inserted");
-                textBox22.Clear();
-                textBox9.Clear();
+                try
+                {
+                    OleDbCommand cmd = new OleDbCommand("INSERT into SallingDetail(Dates, Purchasing, Salling, OtherExpence, TotalBudget, LitrePrice, Litre, Stock) Values('" + dtm + "', '" + lp + "', '" + sale + "','" + expence + "', '" + totalp + "', '" + litre + "', '" + ltrr + "', '"+stock+"')", con);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Inserted");
+                    textBox22.Clear();
+                    textBox9.Clear();
+                    textBox21.Clear();
+                    textBox19.Clear();
+                    textBox8.Clear();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Date must be diffrent from others dubara likh :/ Got it?");
+                    
+                }
+            }
+            else {
+                MessageBox.Show("Itna stock ni he jitna tu bechna chahta hey dubara Sahi likh");
                 textBox21.Clear();
-                textBox19.Clear();
-                textBox8.Clear();
-                con.Close();
-            }catch(Exception ex){
-                MessageBox.Show("Date must be diffrent from others :/ Got it?");
             }
             
             
@@ -384,10 +396,12 @@ namespace Erp_Petrolpump_Management
                 textBox10.Clear();
             }
             double lp = litre * purchase;
-            double totalp = sale - expence;
+            double totalp = sale * litre;
+            stock = purchase - sale;
+            if(sale<purchase){
             try
             {
-                OleDbCommand cmd = new OleDbCommand("INSERT into Deisel(Dates, Purchasing, Salling, OtherExpence, TotalBudget, LitrePrice, Litre) Values('" + dtm + "', '" + lp + "', '" + sale + "','" + expence + "', '" + totalp + "', '" + litre + "', '" + ltrr + "')", con);
+                OleDbCommand cmd = new OleDbCommand("INSERT into Deisel(Dates, Purchasing, Salling, OtherExpence, TotalBudget, LitrePrice, Litre, Stock) Values('" + dtm + "', '" + lp + "', '" + sale + "','" + expence + "', '" + totalp + "', '" + litre + "', '" + ltrr + "', '"+stock+"')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Inserted");
@@ -402,6 +416,11 @@ namespace Erp_Petrolpump_Management
             catch (Exception ex)
             {
                 MessageBox.Show("Date must be diffrent from others :/ Got it?");
+            }
+            }
+            else{
+                MessageBox.Show("Itna stock ni he jitna tu bechna chahta hey dubara Sahi likh");
+                textBox13.Clear();
             }
         }
 
@@ -456,10 +475,12 @@ namespace Erp_Petrolpump_Management
                 textBox15.Clear();
             }
             double lp = litre * purchase;
-            double totalp = sale - expence;
+            double totalp = sale * litre;
+            stock = purchase - sale;
+            if(sale<purchase){
             try
             {
-                OleDbCommand cmd = new OleDbCommand("INSERT into CNG(Dates, Purchasing, Salling, OtherExpence, TotalBudget, LitrePrice, Litre) Values('" + dtm + "', '" + lp + "', '" + sale + "','" + expence + "', '" + totalp + "', '" + litre + "', '" + ltrr + "')", con);
+                OleDbCommand cmd = new OleDbCommand("INSERT into CNG(Dates, Purchasing, Salling, OtherExpence, TotalBudget, LitrePrice, Litre, Stock) Values('" + dtm + "', '" + lp + "', '" + sale + "','" + expence + "', '" + totalp + "', '" + litre + "', '" + ltrr + "', '"+stock+"')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Inserted");
@@ -474,6 +495,11 @@ namespace Erp_Petrolpump_Management
             catch (Exception ex)
             {
                 MessageBox.Show("Date must be diffrent from others :/ Got it?");
+            }
+            }
+            else{
+                MessageBox.Show("Itna stock ni he jitna tu bechna chahta hey dubara Sahi likh");
+                textBox18.Clear();
             }
         }
 

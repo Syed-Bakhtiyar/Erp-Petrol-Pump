@@ -13,11 +13,13 @@ namespace Erp_Petrolpump_Management
     public partial class UpdateRecordsPage : Form
     {
         public OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Syed Inkisar Ahmed\\Documents\\Database1.accdb");
+        
         public UpdateRecordsPage()
         {
             InitializeComponent();
         }
-
+        public double tx,sale,tb,purc,ltpr;
+        public int II;
         private void button7_Click(object sender, EventArgs e)
         {
             Wellcome_Page wl = new Wellcome_Page();
@@ -75,6 +77,7 @@ namespace Erp_Petrolpump_Management
 
         private void button4_Click(object sender, EventArgs e)
         {
+
             try
             {
             double tx = Double.Parse( textBox10.Text);
@@ -151,31 +154,121 @@ namespace Erp_Petrolpump_Management
 
         private void button12_Click(object sender, EventArgs e)
         {
-            try{
             double tx = double.Parse(textBox25.Text);
-            int II = Int32.Parse(textBox28.Text);
-            OleDbCommand upi = new OleDbCommand("UPDATE SallingDetail SET Purchasing =" + tx + " WHERE Dates=" + II + "", con);
-            con.Open();
-            upi.ExecuteNonQuery();
-            con.Close();
+            double stock,temp;
+            try
+            {
+                
+                II = Int32.Parse(textBox28.Text);
+                con.Open();
+                OleDbDataReader dt = null;
+                OleDbCommand cmd = new OleDbCommand("Select * from SallingDetail where Dates="+II+"", con);
+                dt = cmd.ExecuteReader();
+                while (dt.Read())
+                {
+                    sale = double.Parse(dt["Salling"].ToString());
+                    purc =  double.Parse(dt["Purchasing"].ToString());
+                    tb = double.Parse(dt["TotalBudget"].ToString());
+                    ltpr = double.Parse(dt["LitrePrice"].ToString());
+                    stock = double.Parse(dt["Stock"].ToString());
+                }
+              //  textBox1.Text = sel.ToString();
+                con.Close();
             }
-            catch (Exception ex) {
-                MessageBox.Show("Invalid nic number");
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("not execute");
+            }
+
+            double tbs = purc-sale;
+            stock = tx - sale;
+            temp = purc;
+            purc = ltpr * tx;
+
+            if (temp < sale)
+            {
+                try
+                {
+
+                    OleDbCommand upi = new OleDbCommand("UPDATE SallingDetail SET Litre =" + tx + ", Purchasing=" + purc + ", TotalBudget=" + tbs + ", Stock=" + stock + " WHERE Dates=" + II + "", con);
+                    con.Open();
+                    upi.ExecuteNonQuery();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Invalid nic number");
+                }
+            }
+            else {
+                MessageBox.Show("purchasing se ziada to selling he :/");
+                textBox25.Clear();            
             }
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            try{
-            double tx = double.Parse(textBox24.Text);
-            int II = Int32.Parse(textBox27.Text);
-            OleDbCommand upi = new OleDbCommand("UPDATE SallingDetail SET Salling =" + tx + " WHERE Dates=" + II + "", con);
-            con.Open();
-            upi.ExecuteNonQuery();
-            con.Close();
+
+            
+                
+          try{      
+                tx = double.Parse(textBox24.Text);
+          }
+            catch{
+            MessageBox.Show("must fill");
             }
-            catch (Exception ex) {
-                MessageBox.Show("Invalid nic number");
+              double stock, temp;
+            try
+            {
+
+                II = Int32.Parse(textBox27.Text);
+                con.Open();
+                OleDbDataReader dt = null;
+                OleDbCommand cmd = new OleDbCommand("Select * from SallingDetail where Dates=" + II + "", con);
+                dt = cmd.ExecuteReader();
+                while (dt.Read())
+                {
+                    sale = double.Parse(dt["Salling"].ToString());
+                    purc = double.Parse(dt["Purchasing"].ToString());
+                    tb = double.Parse(dt["TotalBudget"].ToString());
+                    ltpr = double.Parse(dt["LitrePrice"].ToString());
+                    stock = double.Parse(dt["Stock"].ToString());
+                }
+                //  textBox1.Text = sel.ToString();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("not execute");
+            }
+
+            double tbs = purc - sale;
+            stock = tx - sale;
+            temp = purc;
+            purc = ltpr * tx;
+
+
+            if (temp < sale)
+            {
+
+                try
+                {
+                    //double tx = double.Parse(textBox24.Text);
+                    //int II = Int32.Parse(textBox27.Text);
+                    OleDbCommand upi = new OleDbCommand("UPDATE SallingDetail SET Salling =" + tx + ", Purchasing=" + purc + ", TotalBudget=" + tbs + ", Stock=" + stock + " WHERE Dates=" + II + "", con);
+                    con.Open();
+                    upi.ExecuteNonQuery();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Invalid nic number");
+                }
+            }
+            else {
+                MessageBox.Show("purchasing se ziada to selling he :/");
+                textBox24.Clear();
             }
 
         }
