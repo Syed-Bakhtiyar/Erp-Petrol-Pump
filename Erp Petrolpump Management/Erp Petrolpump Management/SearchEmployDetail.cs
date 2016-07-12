@@ -106,5 +106,73 @@ namespace Erp_Petrolpump_Management
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            rec = Int32.Parse(textBox3.Text);
+            try
+            {
+                OleDbCommand read = new OleDbCommand("Select * from Deisel WHERE Dates=" + rec + "", con);
+
+                OleDbDataAdapter a = new OleDbDataAdapter();
+                a.SelectCommand = read;
+                DataTable dt = new DataTable();
+                a.Fill(dt);
+                BindingSource bs = new BindingSource();
+                bs.DataSource = dt;
+                dataGridView3.DataSource = bs;
+                a.Update(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("correct nic");
+                textBox1.Clear();
+
+
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter type only number like this 2232016 or 21213");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            rec = Int32.Parse(textBox4.Text);
+            try
+            {
+                OleDbCommand read = new OleDbCommand("Select * from CNG WHERE Dates=" + rec + "", con);
+
+                OleDbDataAdapter a = new OleDbDataAdapter();
+                a.SelectCommand = read;
+                DataTable dt = new DataTable();
+                a.Fill(dt);
+                BindingSource bs = new BindingSource();
+                bs.DataSource = dt;
+                dataGridView4.DataSource = bs;
+                a.Update(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("correct nic");
+                textBox1.Clear();
+
+
+            }
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter type only number like this 2232016 or 21213");
+                e.KeyChar = (char)0;
+            }
+        }
     }
 }

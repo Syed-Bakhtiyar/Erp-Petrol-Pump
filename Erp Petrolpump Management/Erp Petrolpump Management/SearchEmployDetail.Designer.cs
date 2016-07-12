@@ -39,8 +39,18 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView2
@@ -48,7 +58,7 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(758, 84);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(378, 372);
+            this.dataGridView2.Size = new System.Drawing.Size(378, 207);
             this.dataGridView2.TabIndex = 31;
             // 
             // dataGridView1
@@ -56,7 +66,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(29, 84);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(378, 372);
+            this.dataGridView1.Size = new System.Drawing.Size(378, 207);
             this.dataGridView1.TabIndex = 30;
             // 
             // textBox1
@@ -106,9 +116,9 @@
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(755, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 15);
+            this.label2.Size = new System.Drawing.Size(176, 15);
             this.label2.TabIndex = 36;
-            this.label2.Text = "Enter Date";
+            this.label2.Text = "ENTER PETROL RECORD DATE";
             // 
             // textBox2
             // 
@@ -120,7 +130,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(423, 318);
+            this.button4.Location = new System.Drawing.Point(423, 199);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(318, 72);
             this.button4.TabIndex = 39;
@@ -130,7 +140,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(423, 89);
+            this.button3.Location = new System.Drawing.Point(423, 17);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(318, 72);
             this.button3.TabIndex = 38;
@@ -140,7 +150,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(423, 203);
+            this.button5.Location = new System.Drawing.Point(423, 107);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(318, 72);
             this.button5.TabIndex = 40;
@@ -148,11 +158,93 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button6.Location = new System.Drawing.Point(29, 336);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(378, 23);
+            this.button6.TabIndex = 44;
+            this.button6.Text = "Search";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(26, 308);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(173, 15);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Enter Deisel Record Date";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(307, 307);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 42;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(29, 365);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(378, 261);
+            this.dataGridView3.TabIndex = 41;
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button7.Location = new System.Drawing.Point(758, 336);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(378, 23);
+            this.button7.TabIndex = 48;
+            this.button7.Text = "Search";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(755, 308);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(173, 15);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "Enter Deisel Record Date";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(1036, 307);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 46;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(758, 365);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(378, 261);
+            this.dataGridView4.TabIndex = 45;
+            // 
             // SearchEmployDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1165, 478);
+            this.ClientSize = new System.Drawing.Size(1165, 638);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.dataGridView4);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -169,6 +261,8 @@
             this.Load += new System.EventHandler(this.SearchEmployDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,5 +281,13 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.DataGridView dataGridView4;
     }
 }

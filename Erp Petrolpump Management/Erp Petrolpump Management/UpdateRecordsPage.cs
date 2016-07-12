@@ -154,7 +154,7 @@ namespace Erp_Petrolpump_Management
             try{
             double tx = double.Parse(textBox25.Text);
             int II = Int32.Parse(textBox28.Text);
-            OleDbCommand upi = new OleDbCommand("UPDATE SallingDetail SET Salling =" + tx + " WHERE Dates=" + II + "", con);
+            OleDbCommand upi = new OleDbCommand("UPDATE SallingDetail SET Purchasing =" + tx + " WHERE Dates=" + II + "", con);
             con.Open();
             upi.ExecuteNonQuery();
             con.Close();
@@ -169,7 +169,7 @@ namespace Erp_Petrolpump_Management
             try{
             double tx = double.Parse(textBox24.Text);
             int II = Int32.Parse(textBox27.Text);
-            OleDbCommand upi = new OleDbCommand("UPDATE SallingDetail SET OtherExpence =" + tx + " WHERE Dates=" + II + "", con);
+            OleDbCommand upi = new OleDbCommand("UPDATE SallingDetail SET Salling =" + tx + " WHERE Dates=" + II + "", con);
             con.Open();
             upi.ExecuteNonQuery();
             con.Close();
@@ -185,7 +185,7 @@ namespace Erp_Petrolpump_Management
         try{
             double tx = double.Parse(textBox23.Text);
             int II = Int32.Parse(textBox26.Text);
-            OleDbCommand upi = new OleDbCommand("UPDATE SallingDetail SET Purchasing =" + tx + " WHERE Dates=" + II + "", con);
+            OleDbCommand upi = new OleDbCommand("UPDATE SallingDetail SET OtherExpence =" + tx + " WHERE Dates=" + II + "", con);
             con.Open();
             upi.ExecuteNonQuery();
             con.Close();
@@ -295,6 +295,216 @@ namespace Erp_Petrolpump_Management
         }
 
         private void textBox23_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter please number only");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double tx = double.Parse(textBox6.Text);
+                int II = Int32.Parse(textBox3.Text);
+                OleDbCommand upi = new OleDbCommand("UPDATE Deisel SET Purchasing =" + tx + " WHERE Dates=" + II + "", con);
+                con.Open();
+                upi.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Invalid nic number");
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double tx = double.Parse(textBox5.Text);
+                int II = Int32.Parse(textBox2.Text);
+                OleDbCommand upi = new OleDbCommand("UPDATE Deisel SET Salling =" + tx + " WHERE Dates=" + II + "", con);
+                con.Open();
+                upi.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Invalid nic number");
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double tx = double.Parse(textBox4.Text);
+                int II = Int32.Parse(textBox1.Text);
+                OleDbCommand upi = new OleDbCommand("UPDATE SallingDetail SET OtherExpence =" + tx + " WHERE Dates=" + II + "", con);
+                con.Open();
+                upi.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Invalid nic number");
+            }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double tx = double.Parse(textBox22.Text);
+                int II = Int32.Parse(textBox19.Text);
+                OleDbCommand upi = new OleDbCommand("UPDATE CNG SET Purchasing =" + tx + " WHERE Dates=" + II + "", con);
+                con.Open();
+                upi.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Invalid nic number");
+            }
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double tx = double.Parse(textBox21.Text);
+                int II = Int32.Parse(textBox18.Text);
+                OleDbCommand upi = new OleDbCommand("UPDATE CNG SET Salling =" + tx + " WHERE Dates=" + II + "", con);
+                con.Open();
+                upi.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Invalid nic number");
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double tx = double.Parse(textBox20.Text);
+                int II = Int32.Parse(textBox17.Text);
+                OleDbCommand upi = new OleDbCommand("UPDATE CNG SET Salling =" + tx + " WHERE Dates=" + II + "", con);
+                con.Open();
+                upi.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Invalid nic number");
+            }
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter please number only");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter please number only");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter please number only");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter please number only");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter please number only");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter please number only");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox22_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter please number only");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox19_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter please number only");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox21_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter please number only");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox18_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter please number only");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox20_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter please number only");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox17_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar < '0' || e.KeyChar > '9')
             {

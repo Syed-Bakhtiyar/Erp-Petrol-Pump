@@ -60,6 +60,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DeleteCngRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCngRecord.Designer.cs">
+      <DependentUpon>DeleteCngRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteDeiselRec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteDeiselRec.Designer.cs">
+      <DependentUpon>DeleteDeiselRec.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteEvents.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +159,12 @@
     </Compile>
     <EmbeddedResource Include="BossVeiw.resx">
       <DependentUpon>BossVeiw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCngRecord.resx">
+      <DependentUpon>DeleteCngRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteDeiselRec.resx">
+      <DependentUpon>DeleteDeiselRec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteEvents.resx">
       <DependentUpon>DeleteEvents.cs</DependentUpon>

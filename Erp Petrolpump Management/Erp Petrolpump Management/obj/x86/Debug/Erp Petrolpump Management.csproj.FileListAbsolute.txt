@@ -32,3 +32,5 @@ C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp
 C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.DeleteEvents.resources
 C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.BossVeiw.resources
 C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.PrintPageForm.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.DeleteCngRecord.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Debug\Erp_Petrolpump_Management.DeleteDeiselRec.resources

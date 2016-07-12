@@ -99,5 +99,79 @@ namespace Erp_Petrolpump_Management
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter type only number");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                MessageBox.Show("Enter type only number");
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int dl = Int32.Parse(textBox3.Text);
+                OleDbCommand dlt = new OleDbCommand("DELETE FROM Deisel Where Dates=" + dl + "", con);
+                con.Open();
+                dlt.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("can't delete ");
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int dl = Int32.Parse(textBox3.Text);
+                OleDbCommand dlt = new OleDbCommand("DELETE FROM CNG Where Dates=" + dl + "", con);
+                con.Open();
+                dlt.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("can't delete ");
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DeleteDeiselRec dl = new DeleteDeiselRec();
+            this.Hide();
+            dl.Show();
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            DeleteCngRecord dl = new DeleteCngRecord();
+            this.Hide();
+            dl.Show();
+        }
     }
 }

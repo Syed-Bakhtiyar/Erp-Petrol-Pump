@@ -34,16 +34,22 @@ namespace Erp_Petrolpump_Management
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OleDbCommand read = new OleDbCommand("Select * from EmployRecord",con);
+            try
+            {
+                OleDbCommand read = new OleDbCommand("Select * from EmployRecord", con);
 
-            OleDbDataAdapter a = new OleDbDataAdapter();
-            a.SelectCommand = read;
-            DataTable dt = new DataTable();
-            a.Fill(dt);
-            BindingSource bs = new BindingSource();
-            bs.DataSource = dt;
-            dataGridView1.DataSource = bs;
-            a.Update(dt);
+                OleDbDataAdapter a = new OleDbDataAdapter();
+                a.SelectCommand = read;
+                DataTable dt = new DataTable();
+                a.Fill(dt);
+                BindingSource bs = new BindingSource();
+                bs.DataSource = dt;
+                dataGridView1.DataSource = bs;
+                a.Update(dt);
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Can't Read");
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -81,6 +87,8 @@ namespace Erp_Petrolpump_Management
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            try
+            {
             OleDbCommand read = new OleDbCommand("Select * from SallingDetail", con);
 
             OleDbDataAdapter a = new OleDbDataAdapter();
@@ -91,6 +99,48 @@ namespace Erp_Petrolpump_Management
             bs.DataSource = dt;
             dataGridView2.DataSource = bs;
             a.Update(dt);
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Can't Read");
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try{
+            OleDbCommand read = new OleDbCommand("Select * from Deisel", con);
+
+            OleDbDataAdapter a = new OleDbDataAdapter();
+            a.SelectCommand = read;
+            DataTable dt = new DataTable();
+            a.Fill(dt);
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dt;
+            dataGridView3.DataSource = bs;
+            a.Update(dt);
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Can't Read");
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+        try{
+            OleDbCommand read = new OleDbCommand("Select * from CNG", con);
+
+            OleDbDataAdapter a = new OleDbDataAdapter();
+            a.SelectCommand = read;
+            DataTable dt = new DataTable();
+            a.Fill(dt);
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dt;
+            dataGridView4.DataSource = bs;
+            a.Update(dt);
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Can't Read");
+            }
         }
     }
 }
