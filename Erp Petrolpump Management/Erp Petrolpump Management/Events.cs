@@ -12,7 +12,7 @@ namespace Erp_Petrolpump_Management
 {
     public partial class Events : Form
     {
-        public OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Syed Inkisar Ahmed\\Documents\\Database1.accdb");
+        public OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Database1.accdb");
         public int id;
         public String evname;
         public double expence;
@@ -227,6 +227,11 @@ namespace Erp_Petrolpump_Management
             DeleteEvents dl = new DeleteEvents();
             this.Hide();
             dl.Show();
+        }
+
+        private void Events_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

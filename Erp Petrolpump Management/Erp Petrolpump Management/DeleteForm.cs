@@ -12,7 +12,7 @@ namespace Erp_Petrolpump_Management
 {
     public partial class DeleteForm : Form
     {
-        public OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Syed Inkisar Ahmed\\Documents\\Database1.accdb");
+        public OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Database1.accdb");
         public DeleteForm()
         {
             InitializeComponent();

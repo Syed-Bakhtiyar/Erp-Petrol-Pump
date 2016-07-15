@@ -72,6 +72,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DeleteSalling";
             this.Text = "DeleteSalling";
+            this.Load += new System.EventHandler(this.DeleteSalling_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -12,16 +12,17 @@ namespace Erp_Petrolpump_Management
 {
     public partial class Insertion : Form
     {
-        public OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Syed Inkisar Ahmed\\Documents\\Database1.accdb");
+        public OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Database1.accdb");
         public Insertion()
         {
             InitializeComponent();
         }
+        public string tbname,prname;
         public int[] arr = new int[7];
-        public string name, fathername, phone, email;
+        public string name, fathername, phone, email, bksp;
         public int age, nic;
         public long dtm;
-        public double salary, purchase, sale, expence, litre = 1, ltrr,stock;
+        public double salary,qnty, purchase, sale, expence, litre = 1, ltrr,stock;
         public void clearall(){
             textBox1.Clear();
             textBox2.Clear();
@@ -215,13 +216,13 @@ namespace Erp_Petrolpump_Management
             }
 
             double lp = litre*purchase;
-            double totalp = sale * litre;
+            double totalp = (sale * litre)-expence;
             stock = purchase - sale;
-            if (sale < purchase == true)
-            {
-                try
-                {
-                    OleDbCommand cmd = new OleDbCommand("INSERT into SallingDetail(Dates, Purchasing, Salling, OtherExpence, TotalBudget, LitrePrice, Litre, Stock) Values('" + dtm + "', '" + lp + "', '" + sale + "','" + expence + "', '" + totalp + "', '" + litre + "', '" + ltrr + "', '"+stock+"')", con);
+            //if (sale < purchase == true)
+            //{
+              //  try
+               // {
+                    OleDbCommand cmd = new OleDbCommand("INSERT into "+tbname+"(Dates, Purchasing, Salling, OtherExpence, TotalBudget, LitrePrice, Litre, Stock) Values('" + dtm + "', '" + lp + "', '" + sale + "','" + expence + "', '" + totalp + "', '" + litre + "', '" + ltrr + "', '"+stock+"')", con);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Inserted");
@@ -231,17 +232,17 @@ namespace Erp_Petrolpump_Management
                     textBox19.Clear();
                     textBox8.Clear();
                     con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Date must be diffrent from others dubara likh :/ Got it?");
+               // }
+               // catch (Exception ex)
+                //{
+                  //  MessageBox.Show("Date must be diffrent from others dubara likh :/ Got it?");
                     
-                }
-            }
-            else {
-                MessageBox.Show("Itna stock ni he jitna tu bechna chahta hey dubara Sahi likh");
-                textBox21.Clear();
-            }
+                //}
+           // }
+            //else {
+              //  MessageBox.Show("Itna stock ni he jitna tu bechna chahta hey dubara Sahi likh");
+                //textBox21.Clear();
+            //}
             
             
             
@@ -348,29 +349,23 @@ namespace Erp_Petrolpump_Management
         private void button5_Click(object sender, EventArgs e)
         {
 
-            try
-            {
-                purchase = double.Parse(textBox14.Text);
-                ltrr = double.Parse(textBox14.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Please Enter correct");
-                textBox14.Clear();
-            }
+            
+                prname = textBox14.Text;
+               
+            
 
             try
             {
-                sale = double.Parse(textBox13.Text);
+                qnty = double.Parse(textBox13.Text);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Please Enter correct");
+                MessageBox.Show("Please Enter correct in numbers");
                 textBox13.Clear();
             }
             try
             {
-                expence = double.Parse(textBox12.Text);
+                sale = double.Parse(textBox12.Text);
             }
             catch (Exception ex)
             {
@@ -388,20 +383,21 @@ namespace Erp_Petrolpump_Management
             }
             try
             {
-                litre = double.Parse(textBox10.Text);
+                purchase = double.Parse(textBox10.Text);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Form must fill");
                 textBox10.Clear();
             }
-            double lp = litre * purchase;
-            double totalp = sale * litre;
-            stock = purchase - sale;
-            if(sale<purchase){
+           
+            double totalp = sale * purchase;
+            stock = qnty - sale;
+            double tpr = purchase * qnty;
+            if(sale<qnty){
             try
             {
-                OleDbCommand cmd = new OleDbCommand("INSERT into Deisel(Dates, Purchasing, Salling, OtherExpence, TotalBudget, LitrePrice, Litre, Stock) Values('" + dtm + "', '" + lp + "', '" + sale + "','" + expence + "', '" + totalp + "', '" + litre + "', '" + ltrr + "', '"+stock+"')", con);
+                OleDbCommand cmd = new OleDbCommand("INSERT into Oil(ID, ProductName, Price, quantity, Salling, TotalBud, Stock) Values('" + dtm + "', '" + prname + "', '" + tpr + "','" + qnty + "', '"+sale+"', '" + totalp + "', '"+stock+"')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Inserted");
@@ -427,80 +423,7 @@ namespace Erp_Petrolpump_Management
         private void button6_Click(object sender, EventArgs e)
         {
 
-            try
-            {
-                purchase = double.Parse(textBox20.Text);
-                ltrr = double.Parse(textBox20.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Please Enter correct");
-                textBox20.Clear();
-            }
-
-            try
-            {
-                sale = double.Parse(textBox18.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Please Enter correct");
-                textBox18.Clear();
-            }
-            try
-            {
-                expence = double.Parse(textBox17.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Please Enter correct");
-                textBox17.Clear();
-            }
-            try
-            {
-                dtm = long.Parse(textBox16.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Must date without space got it?");
-                textBox16.Clear();
-            }
-            try
-            {
-                litre = double.Parse(textBox15.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Form must fill");
-                textBox15.Clear();
-            }
-            double lp = litre * purchase;
-            double totalp = sale * litre;
-            stock = purchase - sale;
-            if(sale<purchase){
-            try
-            {
-                OleDbCommand cmd = new OleDbCommand("INSERT into CNG(Dates, Purchasing, Salling, OtherExpence, TotalBudget, LitrePrice, Litre, Stock) Values('" + dtm + "', '" + lp + "', '" + sale + "','" + expence + "', '" + totalp + "', '" + litre + "', '" + ltrr + "', '"+stock+"')", con);
-                con.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Inserted");
-                textBox15.Clear();
-                textBox16.Clear();
-                textBox17.Clear();
-                textBox18.Clear();
-                textBox20.Clear();
-
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Date must be diffrent from others :/ Got it?");
-            }
-            }
-            else{
-                MessageBox.Show("Itna stock ni he jitna tu bechna chahta hey dubara Sahi likh");
-                textBox18.Clear();
-            }
+            
         }
 
         private void textBox20_KeyPress(object sender, KeyPressEventArgs e)
@@ -550,11 +473,7 @@ namespace Erp_Petrolpump_Management
 
         private void textBox14_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                MessageBox.Show("Enter please number only");
-                e.KeyChar = (char)0;
-            }
+            
         }
 
         private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
@@ -591,6 +510,86 @@ namespace Erp_Petrolpump_Management
                 MessageBox.Show("Enter please number only");
                 e.KeyChar = (char)0;
             }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            tbname = textBox23.Text;
+            if (tbname.Equals("SallingDetail", StringComparison.Ordinal) ||
+                tbname.Equals("Deisel", StringComparison.Ordinal) ||
+                tbname.Equals("CNG", StringComparison.Ordinal))
+            {
+                groupBox2.Enabled = true;
+                button8.Enabled = false;
+                textBox23.Enabled = false;
+                label24.Enabled = false;
+            }
+            else { MessageBox.Show("Write correct Table Name with case sensitive");
+            
+            }
+
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            
+
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            textBox22.Clear();
+        }
+
+        private void button6_Click_2(object sender, EventArgs e)
+        {
+            textBox9.Clear();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            textBox21.Clear();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            textBox19.Clear();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            textBox8.Clear();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            textBox14.Clear();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            textBox10.Clear();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            textBox13.Clear();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            textBox12.Clear();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            textBox11.Clear();
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

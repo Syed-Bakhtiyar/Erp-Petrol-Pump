@@ -12,14 +12,16 @@ namespace Erp_Petrolpump_Management
 {
     public partial class UpdateRecordsPage : Form
     {
-        public OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Syed Inkisar Ahmed\\Documents\\Database1.accdb");
+        public OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Database1.accdb");
         
         public UpdateRecordsPage()
         {
             InitializeComponent();
         }
-        public double tx,sale,tb,purc,ltpr;
+        public string tbname;
+        public double tx,sale,tb,purc,ltpr,exp,ltr,price;
         public int II;
+        public long dtm; 
         private void button7_Click(object sender, EventArgs e)
         {
             Wellcome_Page wl = new Wellcome_Page();
@@ -154,10 +156,11 @@ namespace Erp_Petrolpump_Management
 
         private void button12_Click(object sender, EventArgs e)
         {
-            double tx = double.Parse(textBox25.Text);
+            
             double stock,temp;
             try
             {
+                tx = double.Parse(textBox25.Text);
                 
                 II = Int32.Parse(textBox28.Text);
                 con.Open();
@@ -167,9 +170,10 @@ namespace Erp_Petrolpump_Management
                 while (dt.Read())
                 {
                     sale = double.Parse(dt["Salling"].ToString());
-                    purc =  double.Parse(dt["Purchasing"].ToString());
+                    purc =  double.Parse(dt["Litre"].ToString());
                     tb = double.Parse(dt["TotalBudget"].ToString());
                     ltpr = double.Parse(dt["LitrePrice"].ToString());
+                    exp = double.Parse(dt["OtherExpence"].ToString());
                     stock = double.Parse(dt["Stock"].ToString());
                 }
               //  textBox1.Text = sel.ToString();
@@ -181,17 +185,16 @@ namespace Erp_Petrolpump_Management
                 MessageBox.Show("not execute");
             }
 
-            double tbs = purc-sale;
-            stock = tx - sale;
-            temp = purc;
+            
+            stock = tx-sale ;
+            
             purc = ltpr * tx;
-
-            if (temp < sale)
-            {
+            double tbs = (tx-sale)*ltpr;
+            
                 try
                 {
 
-                    OleDbCommand upi = new OleDbCommand("UPDATE SallingDetail SET Litre =" + tx + ", Purchasing=" + purc + ", TotalBudget=" + tbs + ", Stock=" + stock + " WHERE Dates=" + II + "", con);
+                    OleDbCommand upi = new OleDbCommand("UPDATE "+tbname+" SET Litre =" + tx + ", Purchasing=" + purc + ", TotalBudget=" + tbs + ", Stock=" + stock + " WHERE Dates=" + II + "", con);
                     con.Open();
                     upi.ExecuteNonQuery();
                     con.Close();
@@ -200,29 +203,18 @@ namespace Erp_Petrolpump_Management
                 {
                     MessageBox.Show("Invalid nic number");
                 }
-            }
-            else {
-                MessageBox.Show("purchasing se ziada to selling he :/");
-                textBox25.Clear();            
-            }
+            
+            
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-
-            
-                
-          try{      
-                tx = double.Parse(textBox24.Text);
-          }
-            catch{
-            MessageBox.Show("must fill");
-            }
-              double stock, temp;
+          
+            double stock, temp;
             try
             {
-
-                II = Int32.Parse(textBox27.Text);
+                tx = double.Parse(textBox25.Text);
+                II = Int32.Parse(textBox28.Text);
                 con.Open();
                 OleDbDataReader dt = null;
                 OleDbCommand cmd = new OleDbCommand("Select * from SallingDetail where Dates=" + II + "", con);
@@ -238,6 +230,7 @@ namespace Erp_Petrolpump_Management
                 //  textBox1.Text = sel.ToString();
                 con.Close();
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show("not execute");
@@ -248,15 +241,12 @@ namespace Erp_Petrolpump_Management
             temp = purc;
             purc = ltpr * tx;
 
-
-            if (temp < sale)
+            if (sale <= stock)
             {
-
                 try
                 {
-                    //double tx = double.Parse(textBox24.Text);
-                    //int II = Int32.Parse(textBox27.Text);
-                    OleDbCommand upi = new OleDbCommand("UPDATE SallingDetail SET Salling =" + tx + ", Purchasing=" + purc + ", TotalBudget=" + tbs + ", Stock=" + stock + " WHERE Dates=" + II + "", con);
+
+                    OleDbCommand upi = new OleDbCommand("UPDATE "+tbname+" SET Litre =" + tx + ", Purchasing=" + purc + ", TotalBudget=" + tbs + ", Stock=" + stock + " WHERE Dates=" + II + "", con);
                     con.Open();
                     upi.ExecuteNonQuery();
                     con.Close();
@@ -266,26 +256,16 @@ namespace Erp_Petrolpump_Management
                     MessageBox.Show("Invalid nic number");
                 }
             }
-            else {
+            else
+            {
                 MessageBox.Show("purchasing se ziada to selling he :/");
-                textBox24.Clear();
+                textBox25.Clear();
             }
 
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-        try{
-            double tx = double.Parse(textBox23.Text);
-            int II = Int32.Parse(textBox26.Text);
-            OleDbCommand upi = new OleDbCommand("UPDATE SallingDetail SET OtherExpence =" + tx + " WHERE Dates=" + II + "", con);
-            con.Open();
-            upi.ExecuteNonQuery();
-            con.Close();
-            }
-            catch (Exception ex) {
-                MessageBox.Show("Invalid nic number");
-            }
         }
 
         private void textBox16_KeyPress(object sender, KeyPressEventArgs e)
@@ -398,104 +378,32 @@ namespace Erp_Petrolpump_Management
 
         private void button13_Click(object sender, EventArgs e)
         {
-            try
-            {
-                double tx = double.Parse(textBox6.Text);
-                int II = Int32.Parse(textBox3.Text);
-                OleDbCommand upi = new OleDbCommand("UPDATE Deisel SET Purchasing =" + tx + " WHERE Dates=" + II + "", con);
-                con.Open();
-                upi.ExecuteNonQuery();
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Invalid nic number");
-            }
+            
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            try
-            {
-                double tx = double.Parse(textBox5.Text);
-                int II = Int32.Parse(textBox2.Text);
-                OleDbCommand upi = new OleDbCommand("UPDATE Deisel SET Salling =" + tx + " WHERE Dates=" + II + "", con);
-                con.Open();
-                upi.ExecuteNonQuery();
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Invalid nic number");
-            }
+            
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            try
-            {
-                double tx = double.Parse(textBox4.Text);
-                int II = Int32.Parse(textBox1.Text);
-                OleDbCommand upi = new OleDbCommand("UPDATE SallingDetail SET OtherExpence =" + tx + " WHERE Dates=" + II + "", con);
-                con.Open();
-                upi.ExecuteNonQuery();
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Invalid nic number");
-            }
+           
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
-            try
-            {
-                double tx = double.Parse(textBox22.Text);
-                int II = Int32.Parse(textBox19.Text);
-                OleDbCommand upi = new OleDbCommand("UPDATE CNG SET Purchasing =" + tx + " WHERE Dates=" + II + "", con);
-                con.Open();
-                upi.ExecuteNonQuery();
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Invalid nic number");
-            }
+            
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            try
-            {
-                double tx = double.Parse(textBox21.Text);
-                int II = Int32.Parse(textBox18.Text);
-                OleDbCommand upi = new OleDbCommand("UPDATE CNG SET Salling =" + tx + " WHERE Dates=" + II + "", con);
-                con.Open();
-                upi.ExecuteNonQuery();
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Invalid nic number");
-            }
+            
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            try
-            {
-                double tx = double.Parse(textBox20.Text);
-                int II = Int32.Parse(textBox17.Text);
-                OleDbCommand upi = new OleDbCommand("UPDATE CNG SET Salling =" + tx + " WHERE Dates=" + II + "", con);
-                con.Open();
-                upi.ExecuteNonQuery();
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Invalid nic number");
-            }
+            
         }
 
         private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
@@ -604,6 +512,135 @@ namespace Erp_Petrolpump_Management
                 MessageBox.Show("Enter please number only");
                 e.KeyChar = (char)0;
             }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            tbname = textBox29.Text;
+            if (tbname.Equals("SallingDetail", StringComparison.Ordinal) ||
+                tbname.Equals("Deisel", StringComparison.Ordinal) ||
+                tbname.Equals("CNG", StringComparison.Ordinal) )
+            {
+                groupBox1.Enabled = true;
+                if (tbname.Equals("SallingDetail", StringComparison.Ordinal))
+                {
+                    groupBox1.Text = "Petrol";
+                }
+                else
+                {
+                    groupBox1.Text = tbname;
+                }
+
+            }
+            else
+            {
+
+                MessageBox.Show("Write correct Table Name with case sensitive");
+                groupBox1.Enabled = false;
+            }
+        }
+
+        private void button17_Click_1(object sender, EventArgs e)
+        {
+            tbname = textBox29.Text;
+            if (tbname.Equals("SallingDetail", StringComparison.Ordinal) ||
+                tbname.Equals("Deisel", StringComparison.Ordinal) ||
+                tbname.Equals("CNG", StringComparison.Ordinal))
+            {
+                groupBox1.Enabled = true;
+                if (tbname.Equals("SallingDetail", StringComparison.Ordinal))
+                {
+                    groupBox1.Text = "Petrol";
+                }
+                else
+                {
+                    groupBox1.Text = tbname;
+                }
+
+            }
+            else
+            {
+
+                MessageBox.Show("Write correct Table Name with case sensitive");
+                groupBox1.Enabled = false;
+            }
+        }
+
+        private void button12_Click_1(object sender, EventArgs e)
+        {
+            try                                        //id number
+            {
+                dtm = long.Parse(textBox28.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Must ID without space got it?");
+                textBox28.Clear();
+            }
+
+            try                            //litre
+            {
+
+                ltr = double.Parse(textBox25.Text);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please Enter correct");
+                textBox25.Clear();
+            }
+
+            try                             //sale
+            {
+                sale = double.Parse(textBox24.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please Enter correct");
+                textBox24.Clear();
+            }
+            try                             //expence
+            {
+                exp = double.Parse(textBox33.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please Enter correct");
+                textBox33.Clear();
+            }
+
+            try                        //litre price
+            {
+                price = double.Parse(textBox23.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Litre Price must enter");
+                textBox23.Clear();
+            }
+
+            double lp = ltr * price;
+            double totalp = (sale * ltr) - exp;
+            double stock = ltr - sale;
+
+            //    try
+            //   {
+            OleDbCommand cmd = new OleDbCommand("UPDATE " + tbname + " SET Purchasing=" + lp + ", Salling=" + sale + ", OtherExpence=" + exp + ", TotalBudget=" + totalp + ", LitrePrice=" + price + ", Litre=" + ltr + ", Stock=" + stock + " WHERE Dates=" + dtm + "", con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Inserted");
+            textBox28.Clear();
+            textBox25.Clear();
+            textBox24.Clear();
+            textBox33.Clear();
+            textBox23.Clear();
+            con.Close();
+            //    }
+            //    catch (Exception ex)
+            //   {
+            //       MessageBox.Show("Date must be diffrent from others dubara likh :/ Got it?");
+
+            //   }
         }
     }
 }

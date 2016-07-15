@@ -11,11 +11,12 @@ namespace Erp_Petrolpump_Management
 {
     public partial class VeiwAll : Form
     {
-        public OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Syed Inkisar Ahmed\\Documents\\Database1.accdb");
+        public OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Database1.accdb");
         public VeiwAll()
         {
             InitializeComponent();
         }
+        public string tbname;
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -87,60 +88,48 @@ namespace Erp_Petrolpump_Management
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            try
+            tbname = textBox1.Text;
+            if (tbname.Equals("SallingDetail", StringComparison.Ordinal) ||
+                tbname.Equals("Deisel", StringComparison.Ordinal) ||
+                tbname.Equals("CNG", StringComparison.Ordinal)||
+                tbname.Equals("Oil", StringComparison.Ordinal))
             {
-            OleDbCommand read = new OleDbCommand("Select * from SallingDetail", con);
+                groupBox1.Enabled = true;
+                groupBox1.Text = tbname;
+                try
+                {
+                    OleDbCommand read = new OleDbCommand("Select * from "+tbname+"", con);
 
-            OleDbDataAdapter a = new OleDbDataAdapter();
-            a.SelectCommand = read;
-            DataTable dt = new DataTable();
-            a.Fill(dt);
-            BindingSource bs = new BindingSource();
-            bs.DataSource = dt;
-            dataGridView2.DataSource = bs;
-            a.Update(dt);
+                    OleDbDataAdapter a = new OleDbDataAdapter();
+                    a.SelectCommand = read;
+                    DataTable dt = new DataTable();
+                    a.Fill(dt);
+                    BindingSource bs = new BindingSource();
+                    bs.DataSource = dt;
+                    dataGridView2.DataSource = bs;
+                    a.Update(dt);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Can't Read");
+                }
             }
-            catch (Exception ex) {
-                MessageBox.Show("Can't Read");
+            else
+            {
+                MessageBox.Show("Write correct Table Name with case sensitive");
+                groupBox1.Enabled = false;
             }
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            try{
-            OleDbCommand read = new OleDbCommand("Select * from Deisel", con);
-
-            OleDbDataAdapter a = new OleDbDataAdapter();
-            a.SelectCommand = read;
-            DataTable dt = new DataTable();
-            a.Fill(dt);
-            BindingSource bs = new BindingSource();
-            bs.DataSource = dt;
-            dataGridView3.DataSource = bs;
-            a.Update(dt);
-            }
-            catch (Exception ex) {
-                MessageBox.Show("Can't Read");
-            }
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-        try{
-            OleDbCommand read = new OleDbCommand("Select * from CNG", con);
-
-            OleDbDataAdapter a = new OleDbDataAdapter();
-            a.SelectCommand = read;
-            DataTable dt = new DataTable();
-            a.Fill(dt);
-            BindingSource bs = new BindingSource();
-            bs.DataSource = dt;
-            dataGridView4.DataSource = bs;
-            a.Update(dt);
-            }
-            catch (Exception ex) {
-                MessageBox.Show("Can't Read");
-            }
+        
         }
     }
 }

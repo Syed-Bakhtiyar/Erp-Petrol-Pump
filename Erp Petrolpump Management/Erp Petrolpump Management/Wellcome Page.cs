@@ -96,5 +96,12 @@ namespace Erp_Petrolpump_Management
             this.Hide();
             pr.Show();
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            FaxPageForOrdered fx = new FaxPageForOrdered();
+            this.Hide();
+            fx.Show();
+        }
     }
 }

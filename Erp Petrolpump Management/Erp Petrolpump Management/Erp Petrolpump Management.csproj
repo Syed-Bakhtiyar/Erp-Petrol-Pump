@@ -60,6 +60,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Database1DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DeleteCngRecord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +106,12 @@
     </Compile>
     <Compile Include="Events.Designer.cs">
       <DependentUpon>Events.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaxPageForOrdered.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaxPageForOrdered.Designer.cs">
+      <DependentUpon>FaxPageForOrdered.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -181,6 +192,9 @@
     <EmbeddedResource Include="Events.resx">
       <DependentUpon>Events.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FaxPageForOrdered.resx">
+      <DependentUpon>FaxPageForOrdered.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +241,17 @@
     <None Include="Database1DataSet.xss">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </None>
+    <None Include="Database1DataSet1.xsc">
+      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet1.xss">
+      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.cs</LastGenOutput>
@@ -272,6 +297,8 @@
     <None Include="bin\Debug\Untitled-222.jpg" />
     <None Include="bin\Debug\boss.jpg" />
     <None Include="bin\Debug\pr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Database1.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

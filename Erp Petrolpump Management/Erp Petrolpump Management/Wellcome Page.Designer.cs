@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -40,16 +42,35 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button12 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // button13
+            // 
+            this.button13.Image = global::Erp_Petrolpump_Management.Properties.Resources.Untitled_222;
+            this.button13.Location = new System.Drawing.Point(379, 270);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(178, 79);
+            this.button13.TabIndex = 14;
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button12
+            // 
+            this.button12.Image = global::Erp_Petrolpump_Management.Properties.Resources.pr;
+            this.button12.Location = new System.Drawing.Point(195, 577);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(177, 79);
+            this.button12.TabIndex = 13;
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
             this.button11.Image = global::Erp_Petrolpump_Management.Properties.Resources.Untitled_222;
             this.button11.Location = new System.Drawing.Point(195, 270);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(360, 79);
+            this.button11.Size = new System.Drawing.Size(178, 79);
             this.button11.TabIndex = 12;
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
@@ -166,21 +187,12 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button12
-            // 
-            this.button12.Image = global::Erp_Petrolpump_Management.Properties.Resources.pr;
-            this.button12.Location = new System.Drawing.Point(195, 577);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(177, 79);
-            this.button12.TabIndex = 13;
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
             // Wellcome_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 714);
+            this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
@@ -217,5 +229,6 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
     }
 }
