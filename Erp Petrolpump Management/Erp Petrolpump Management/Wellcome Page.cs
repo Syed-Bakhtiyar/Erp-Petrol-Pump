@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using System.Diagnostics;
 namespace Erp_Petrolpump_Management
 {
     public partial class Wellcome_Page : Form
@@ -102,6 +102,11 @@ namespace Erp_Petrolpump_Management
             FaxPageForOrdered fx = new FaxPageForOrdered();
             this.Hide();
             fx.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/Syed-Bakhtiyar");
         }
     }
 }

@@ -120,17 +120,21 @@
   <data name="label2.Text" xml:space="preserve">
     <value>This ERP is dedicated to our most Respectful Teacher Miss Aneela Nawaz
 She teach us how to program in two languages java and c# not only program
-She teach us how to live with struggle and She help me alot JazakAllah and She
-give me every answer of my question with simple example not complicated, She
-Was a really a sincere teacher :) JazakAllah for your contribution.. and also dedicated
-to ma'm Aniqa Sheerazi who teach us every basic things in relational database And solve
-our problems every time when i asked :) jazakAllah for your contribution I don't know about all students
+She teach us how to live with struggle and She help me alot JazakAllah and 
+She give me every answer of my question with simple example not complicated,
+She Was a really a sincere teacher :) JazakAllah for your contribution.. and also 
+dedicated to ma'm Aniqa Sheerazi who teach us every basic things in relational 
+database And solve my all problems every time when i asked :) 
+jazakAllah for your contribution I don't know about all students
 but I am proud to be a student of both of u :)
-1)This programm is about petrol pump management System where manager managed Employs Salary E.t.c 
-And about product (petrol , Diesel, E.t.c) Salling , purchasing and Expence
-2) There is 2 module 
-(i) Manager to Employ
+1) This programm is about petrol pump management System where manager managed all basic module  
+
+2) There is basic 4 module 
+(i) Manager to Employ like salary e.t.c
 (ii) Manager to product
+(iii) Manager to Boss
+(iv) Manager to handle Events
+
 3) now you can run this app and tells how's that :)</value>
   </data>
 </root>

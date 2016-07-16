@@ -16,12 +16,21 @@ namespace Erp_Petrolpump_Management
         {
             InitializeComponent();
         }
-
+        public int id;
+        public string tbname;
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                id = Int32.Parse(textBox1.Text);
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.ToString());
+                textBox1.Clear();
+            }
             con.Open();
             OleDbDataReader dt = null;
-            OleDbCommand cmd = new OleDbCommand("Select * from EmployRecord", con);
+            OleDbCommand cmd = new OleDbCommand("Select * from EmployRecord Where Nic="+id+"", con);
             dt = cmd.ExecuteReader();
             
             while(dt.Read()){
@@ -46,10 +55,19 @@ namespace Erp_Petrolpump_Management
 
         private void button4_Click(object sender, EventArgs e)
         {
+            try
+            {
+                id =Int32.Parse( textBox3.Text);
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Please write correct input");
+                textBox3.Clear();
+            }
+            
             richTextBox2.Clear();
             con.Open();
             OleDbDataReader dt = null;
-            OleDbCommand cmd = new OleDbCommand("Select * from SallingDetail", con);
+            OleDbCommand cmd = new OleDbCommand("Select * from "+tbname+" where Dates="+id+"", con);
             dt = cmd.ExecuteReader();
 
             while (dt.Read())
@@ -79,6 +97,66 @@ namespace Erp_Petrolpump_Management
         private void button6_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            printDialog1.Document = printDocument1;
+            if (printDialog1.ShowDialog() == DialogResult.OK) {
+                printDocument1.Print();
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString(richTextBox1.Text, new Font("Arial",40,FontStyle.Bold),Brushes.Black,150,125);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            tbname = textBox2.Text;
+            if (tbname.Equals("SallingDetail", StringComparison.Ordinal) ||
+                tbname.Equals("Deisel", StringComparison.Ordinal) ||
+                tbname.Equals("CNG", StringComparison.Ordinal)||
+                tbname.Equals("Oil",StringComparison.Ordinal))
+            {
+                button4.Enabled = true;
+                button3.Enabled = true;
+                textBox3.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Write correct Table Name with case sensitive");
+
+            }
+        }
+
+        private void printDocument2_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString(richTextBox2.Text, new Font("Arial", 40, FontStyle.Bold), Brushes.Black, 150, 125);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            printDialog1.Document = printDocument2;
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument2.Print();
+            }
+        }
+
+        private void Ckear(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+            richTextBox2.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox1.Clear();
         }
     }
 }

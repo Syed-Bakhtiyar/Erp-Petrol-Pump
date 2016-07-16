@@ -60,6 +60,20 @@ namespace Erp_Petrolpump_Management.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap _378961_350431631639290_1306186266_n___00 {
+            get {
+                object obj = ResourceManager.GetObject("378961_350431631639290_1306186266_n---00", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap about {
+            get {
+                object obj = ResourceManager.GetObject("about", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap boss {
             get {
                 object obj = ResourceManager.GetObject("boss", resourceCulture);
@@ -105,6 +119,27 @@ namespace Erp_Petrolpump_Management.Properties {
         internal static System.Drawing.Bitmap Erp_picture {
             get {
                 object obj = ResourceManager.GetObject("Erp picture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Gmail {
+            get {
+                object obj = ResourceManager.GetObject("Gmail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap insertpage {
+            get {
+                object obj = ResourceManager.GetObject("insertpage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap login {
+            get {
+                object obj = ResourceManager.GetObject("login", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -47,7 +47,7 @@
             // 
             // button13
             // 
-            this.button13.Image = global::Erp_Petrolpump_Management.Properties.Resources.Untitled_222;
+            this.button13.Image = global::Erp_Petrolpump_Management.Properties.Resources.Gmail;
             this.button13.Location = new System.Drawing.Point(379, 270);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(178, 79);
@@ -103,6 +103,7 @@
             this.button8.Size = new System.Drawing.Size(177, 79);
             this.button8.TabIndex = 9;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 

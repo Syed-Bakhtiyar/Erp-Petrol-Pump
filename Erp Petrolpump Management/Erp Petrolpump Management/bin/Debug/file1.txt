@@ -1,1 +1,2 @@
-product namedfgdfgd\nquantity2\n
+product name:  oil
+quantity:   2

@@ -127,17 +127,26 @@
   <data name="Erp picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Erp picture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="about" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\about.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Untitled-222" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Untitled-222.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="boss" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\boss.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Untitled-81" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Untitled-8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="insertpage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\insertpage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\btn-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Untitled-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled-7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Gmail.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\btn-4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,19 +154,25 @@
   <data name="btn-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\btn-5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Untitled-71" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Untitled-7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btn-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\btn-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\btn-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Untitled12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Untitled12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitled-71" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Untitled-7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="boss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\boss.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\pr.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\login.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="378961_350431631639290_1306186266_n---00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\378961_350431631639290_1306186266_n---00.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
