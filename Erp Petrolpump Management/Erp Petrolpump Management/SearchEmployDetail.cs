@@ -81,10 +81,13 @@ namespace Erp_Petrolpump_Management
                 BindingSource bs = new BindingSource();
                 bs.DataSource = dt;
                 dataGridView2.DataSource = bs;
+                a.Update(dt);
                 textBox2.Clear();
             }
             catch (Exception ex)
-            { MessageBox.Show("can't search"); }
+            { 
+                MessageBox.Show("can't search"); 
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)

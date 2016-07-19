@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Insertion));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -94,7 +95,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupBox2.Controls.Add(this.button12);
             this.groupBox2.Controls.Add(this.button11);
             this.groupBox2.Controls.Add(this.button10);
@@ -182,7 +183,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(124, 20);
             this.textBox9.TabIndex = 30;
-            this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox9_KeyPress);
+            this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox9_KeyPress_1);
             // 
             // label10
             // 
@@ -200,7 +201,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(124, 20);
             this.textBox8.TabIndex = 28;
-            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox9_KeyPress_1);
             // 
             // label9
             // 
@@ -228,7 +229,7 @@
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(124, 20);
             this.textBox19.TabIndex = 19;
-            this.textBox19.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox19_KeyPress);
+            this.textBox19.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox9_KeyPress_1);
             // 
             // label19
             // 
@@ -245,7 +246,7 @@
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(124, 20);
             this.textBox21.TabIndex = 15;
-            this.textBox21.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox21_KeyPress);
+            this.textBox21.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox9_KeyPress_1);
             // 
             // label21
             // 
@@ -269,13 +270,13 @@
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(7, 43);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(146, 13);
+            this.label22.Size = new System.Drawing.Size(156, 13);
             this.label22.TabIndex = 12;
-            this.label22.Text = "Purchasing Petrol Write Liters";
+            this.label22.Text = "Purchasing Product Write Liters";
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.textBox7);
@@ -477,7 +478,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupBox3.Controls.Add(this.button17);
             this.groupBox3.Controls.Add(this.button16);
             this.groupBox3.Controls.Add(this.button15);
@@ -589,9 +590,9 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(7, 155);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(100, 26);
+            this.label12.Size = new System.Drawing.Size(84, 13);
             this.label12.TabIndex = 27;
-            this.label12.Text = "Date in Number like\r\n this 001122";
+            this.label12.Text = "Enter ID number";
             // 
             // button5
             // 
@@ -657,8 +658,8 @@
             // 
             // textBox23
             // 
-            this.textBox23.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBox23.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox23.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBox23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBox23.Location = new System.Drawing.Point(332, 42);
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(325, 20);
@@ -679,7 +680,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label24.Location = new System.Drawing.Point(332, 13);
@@ -690,10 +691,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Erp_Petrolpump_Management.Properties.Resources.insertpage;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1061, 459);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 

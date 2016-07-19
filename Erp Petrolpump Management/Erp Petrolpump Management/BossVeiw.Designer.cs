@@ -127,8 +127,10 @@
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Enabled = false;
+            this.textBox3.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox3.Location = new System.Drawing.Point(180, 35);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 19);
@@ -177,8 +179,10 @@
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Enabled = false;
+            this.textBox2.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox2.Location = new System.Drawing.Point(208, 142);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 19);
@@ -205,8 +209,10 @@
             // 
             // textBox11
             // 
+            this.textBox11.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox11.Enabled = false;
+            this.textBox11.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox11.Location = new System.Drawing.Point(208, 100);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(100, 19);
@@ -233,8 +239,10 @@
             // 
             // textBox14
             // 
+            this.textBox14.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox14.Enabled = false;
+            this.textBox14.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox14.Location = new System.Drawing.Point(209, 63);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(100, 19);
@@ -261,8 +269,10 @@
             // 
             // textBox15
             // 
+            this.textBox15.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox15.Enabled = false;
+            this.textBox15.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox15.Location = new System.Drawing.Point(209, 29);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(100, 19);
@@ -300,7 +310,9 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox1.Location = new System.Drawing.Point(648, 7);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -347,8 +359,10 @@
             // 
             // textBox5
             // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Enabled = false;
+            this.textBox5.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox5.Location = new System.Drawing.Point(209, 203);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 19);
@@ -383,8 +397,10 @@
             // 
             // textBox6
             // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Enabled = false;
+            this.textBox6.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox6.Location = new System.Drawing.Point(209, 165);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 19);
@@ -411,8 +427,10 @@
             // 
             // textBox7
             // 
+            this.textBox7.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Enabled = false;
+            this.textBox7.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox7.Location = new System.Drawing.Point(209, 129);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 19);
@@ -439,8 +457,10 @@
             // 
             // textBox9
             // 
+            this.textBox9.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox9.Enabled = false;
+            this.textBox9.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox9.Location = new System.Drawing.Point(209, 93);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(100, 19);
@@ -467,8 +487,10 @@
             // 
             // textBox10
             // 
+            this.textBox10.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox10.Enabled = false;
+            this.textBox10.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox10.Location = new System.Drawing.Point(209, 59);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(100, 19);
@@ -523,8 +545,10 @@
             // 
             // textBox4
             // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Enabled = false;
+            this.textBox4.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox4.Location = new System.Drawing.Point(208, 221);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 19);
@@ -551,8 +575,10 @@
             // 
             // textBox16
             // 
+            this.textBox16.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox16.Enabled = false;
+            this.textBox16.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox16.Location = new System.Drawing.Point(208, 182);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(100, 19);
@@ -579,8 +605,10 @@
             // 
             // textBox17
             // 
+            this.textBox17.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox17.Enabled = false;
+            this.textBox17.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox17.Location = new System.Drawing.Point(208, 141);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(100, 19);
@@ -607,8 +635,10 @@
             // 
             // textBox18
             // 
+            this.textBox18.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox18.Enabled = false;
+            this.textBox18.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox18.Location = new System.Drawing.Point(209, 101);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(100, 19);
@@ -635,8 +665,10 @@
             // 
             // textBox19
             // 
+            this.textBox19.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox19.Enabled = false;
+            this.textBox19.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox19.Location = new System.Drawing.Point(209, 63);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(100, 19);
@@ -663,8 +695,10 @@
             // 
             // textBox20
             // 
+            this.textBox20.BackColor = System.Drawing.SystemColors.MenuText;
             this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox20.Enabled = false;
+            this.textBox20.ForeColor = System.Drawing.SystemColors.Info;
             this.textBox20.Location = new System.Drawing.Point(209, 29);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(100, 19);
@@ -683,6 +717,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lime;
             this.ClientSize = new System.Drawing.Size(906, 548);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
@@ -691,6 +726,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "BossVeiw";
             this.Text = "BossVeiw";
             this.Load += new System.EventHandler(this.BossVeiw_Load);

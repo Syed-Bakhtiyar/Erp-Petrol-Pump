@@ -41,11 +41,12 @@ namespace Erp_Petrolpump_Management
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string dttm = DateTime.Now.ToLongDateString();
             try
             {
                 String tx = textBox12.Text;
                 int II = Int32.Parse(textBox16.Text);
-                OleDbCommand upi = new OleDbCommand("UPDATE EmployRecord SET Name ='" + tx + "' WHERE Nic=" + II + "", con);
+                OleDbCommand upi = new OleDbCommand("UPDATE EmployRecord SET Name ='" + tx + "', datetm='"+dttm+"' WHERE Nic=" + II + "", con);
                 con.Open();
                 upi.ExecuteNonQuery();
                 MessageBox.Show("Updated");
@@ -270,47 +271,27 @@ namespace Erp_Petrolpump_Management
 
         private void textBox16_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                MessageBox.Show("Enter type only number");
-                e.KeyChar = (char)0;
-            }
+
         }
 
         private void textBox15_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                MessageBox.Show("Enter type only number");
-                e.KeyChar = (char)0;
-            }
+
         }
 
         private void textBox14_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                MessageBox.Show("Enter type only number");
-                e.KeyChar = (char)0;
-            }
+
         }
 
         private void textBox13_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                MessageBox.Show("Enter type only number");
-                e.KeyChar = (char)0;
-            }
+
         }
 
         private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                MessageBox.Show("Enter type only number");
-                e.KeyChar = (char)0;
-            }
+
         }
 
         private void textBox28_KeyPress(object sender, KeyPressEventArgs e)
@@ -568,6 +549,7 @@ namespace Erp_Petrolpump_Management
 
         private void button12_Click_1(object sender, EventArgs e)
         {
+            string dttm = DateTime.Now.ToLongDateString();
             try                                        //id number
             {
                 dtm = long.Parse(textBox28.Text);
@@ -625,7 +607,7 @@ namespace Erp_Petrolpump_Management
 
             //    try
             //   {
-            OleDbCommand cmd = new OleDbCommand("UPDATE " + tbname + " SET Purchasing=" + lp + ", Salling=" + sale + ", OtherExpence=" + exp + ", TotalBudget=" + totalp + ", LitrePrice=" + price + ", Litre=" + ltr + ", Stock=" + stock + " WHERE Dates=" + dtm + "", con);
+            OleDbCommand cmd = new OleDbCommand("UPDATE " + tbname + " SET Purchasing=" + lp + ", Salling=" + sale + ", OtherExpence=" + exp + ", TotalBudget=" + totalp + ", LitrePrice=" + price + ", Litre=" + ltr + ", Stock=" + stock + ",datetm='"+dttm+"' WHERE Dates=" + dtm + "", con);
             con.Open();
             cmd.ExecuteNonQuery();
             MessageBox.Show("Inserted");
@@ -641,6 +623,11 @@ namespace Erp_Petrolpump_Management
             //       MessageBox.Show("Date must be diffrent from others dubara likh :/ Got it?");
 
             //   }
+        }
+
+        private void textBox16_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

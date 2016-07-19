@@ -58,6 +58,8 @@ namespace Erp_Petrolpump_Management
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            string dtm = DateTime.Now.ToLongDateString();
             for (int i=0;i<arr.Length ;i++ ) {
                 arr[i] = 0;
             }
@@ -95,7 +97,7 @@ namespace Erp_Petrolpump_Management
             
             
             
-            if (email.IndexOf('@') == -1 || email.IndexOf('.') == -1)
+            if (!email.Contains("@") || !email.Contains(".com"))
             {
                 arr[3] = 0;
             }
@@ -144,7 +146,7 @@ namespace Erp_Petrolpump_Management
                
                 if(arr[0]==1&&arr[1]==1&&arr[2]==1&&arr[3]==1&&arr[4]==1&&arr[5]==1&&arr[6]==1){
                     try{
-                    OleDbCommand cmd = new OleDbCommand("INSERT into EmployRecord(Nic, Name, Age,Salary, FatherName, Email, Phone) Values('" + nic + "', '" + name + "', '" + age + "', '" + salary + "', '" + fathername + "', '" + email + "', '" + phone + "') ", con);
+                    OleDbCommand cmd = new OleDbCommand("INSERT into EmployRecord(Nic, Name, Age,Salary, FatherName, Email, Phone, datetm) Values('" + nic + "', '" + name + "', '" + age + "', '" + salary + "', '" + fathername + "', '" + email + "', '" + phone + "','"+dtm+"') ", con);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     textBox1.Clear();
@@ -169,7 +171,7 @@ namespace Erp_Petrolpump_Management
 
         private void button7_Click(object sender, EventArgs e)
         {
-           
+            string dttm = DateTime.Now.ToLongDateString();
             try
             {
                 purchase = double.Parse(textBox22.Text);
@@ -220,9 +222,9 @@ namespace Erp_Petrolpump_Management
             stock = purchase - sale;
             //if (sale < purchase == true)
             //{
-              //  try
-               // {
-                    OleDbCommand cmd = new OleDbCommand("INSERT into "+tbname+"(Dates, Purchasing, Salling, OtherExpence, TotalBudget, LitrePrice, Litre, Stock) Values('" + dtm + "', '" + lp + "', '" + sale + "','" + expence + "', '" + totalp + "', '" + litre + "', '" + ltrr + "', '"+stock+"')", con);
+                try
+                {
+                    OleDbCommand cmd = new OleDbCommand("INSERT into "+tbname+"(Dates, Purchasing, Salling, OtherExpence, TotalBudget, LitrePrice, Litre, Stock, datetm) Values('" + dtm + "', '" + lp + "', '" + sale + "','" + expence + "', '" + totalp + "', '" + litre + "', '" + ltrr + "', '"+stock+"','"+dttm+"')", con);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Inserted");
@@ -232,12 +234,12 @@ namespace Erp_Petrolpump_Management
                     textBox19.Clear();
                     textBox8.Clear();
                     con.Close();
-               // }
-               // catch (Exception ex)
-                //{
-                  //  MessageBox.Show("Date must be diffrent from others dubara likh :/ Got it?");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Date must be diffrent from others dubara likh :/ Got it?");
                     
-                //}
+                }
            // }
             //else {
               //  MessageBox.Show("Itna stock ni he jitna tu bechna chahta hey dubara Sahi likh");
@@ -289,11 +291,7 @@ namespace Erp_Petrolpump_Management
 
         private void textBox22_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                MessageBox.Show("Enter type only number");
-                e.KeyChar = (char)0;
-            }
+            
         }
 
         private void textBox21_KeyPress(object sender, KeyPressEventArgs e)
@@ -321,20 +319,12 @@ namespace Erp_Petrolpump_Management
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                MessageBox.Show("Enter please number only");
-                e.KeyChar = (char)0;
-            }
+            
         }
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                MessageBox.Show("Enter please number only");
-                e.KeyChar = (char)0;
-            }
+            
         }
 
         private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
@@ -348,7 +338,7 @@ namespace Erp_Petrolpump_Management
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            string dttm = DateTime.Now.ToLongDateString();
             
                 prname = textBox14.Text;
                
@@ -397,7 +387,7 @@ namespace Erp_Petrolpump_Management
             if(sale<qnty){
             try
             {
-                OleDbCommand cmd = new OleDbCommand("INSERT into Oil(ID, ProductName, Price, quantity, Salling, TotalBud, Stock) Values('" + dtm + "', '" + prname + "', '" + tpr + "','" + qnty + "', '"+sale+"', '" + totalp + "', '"+stock+"')", con);
+                OleDbCommand cmd = new OleDbCommand("INSERT into Oil(Dates, ProductName, Price, quantity, Salling, TotalBud, Stock, datetm) Values('" + dtm + "', '" + prname + "', '" + tpr + "','" + qnty + "', '"+sale+"', '" + totalp + "', '"+stock+"','"+dttm+"')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Inserted");
@@ -478,38 +468,22 @@ namespace Erp_Petrolpump_Management
 
         private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                MessageBox.Show("Enter please number only");
-                e.KeyChar = (char)0;
-            }
+            
         }
 
         private void textBox13_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                MessageBox.Show("Enter please number only");
-                e.KeyChar = (char)0;
-            }
+            
         }
 
         private void textBox12_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                MessageBox.Show("Enter please number only");
-                e.KeyChar = (char)0;
-            }
+            
         }
 
         private void textBox11_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                MessageBox.Show("Enter please number only");
-                e.KeyChar = (char)0;
-            }
+            
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -520,8 +494,8 @@ namespace Erp_Petrolpump_Management
                 tbname.Equals("CNG", StringComparison.Ordinal))
             {
                 groupBox2.Enabled = true;
-                button8.Enabled = false;
-                textBox23.Enabled = false;
+            //    button8.Enabled = false;
+              //  textBox23.Enabled = false;
                 label24.Enabled = false;
             }
             else { MessageBox.Show("Write correct Table Name with case sensitive");
@@ -588,6 +562,11 @@ namespace Erp_Petrolpump_Management
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox9_KeyPress_1(object sender, KeyPressEventArgs e)
         {
 
         }

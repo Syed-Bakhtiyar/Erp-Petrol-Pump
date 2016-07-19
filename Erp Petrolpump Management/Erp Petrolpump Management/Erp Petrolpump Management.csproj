@@ -70,6 +70,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Database1DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database1DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DeleteCngRecord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +278,28 @@
     <None Include="Database1DataSet2.xss">
       <DependentUpon>Database1DataSet2.xsd</DependentUpon>
     </None>
+    <None Include="Database1DataSet3.xsc">
+      <DependentUpon>Database1DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet3.xss">
+      <DependentUpon>Database1DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet4.xsc">
+      <DependentUpon>Database1DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet4.xss">
+      <DependentUpon>Database1DataSet4.xsd</DependentUpon>
+    </None>
     <None Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.cs</LastGenOutput>
@@ -320,6 +352,8 @@
     <None Include="bin\Debug\insertpage.jpg" />
     <None Include="bin\Debug\about.jpg" />
     <None Include="bin\Debug\378961_350431631639290_1306186266_n---00.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Database1.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

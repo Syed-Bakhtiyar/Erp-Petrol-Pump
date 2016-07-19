@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateRecordsPage));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -71,8 +72,10 @@
             this.label24 = new System.Windows.Forms.Label();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -165,16 +168,16 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(135, 20);
             this.textBox9.TabIndex = 33;
-            this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox9_KeyPress);
+            this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox16_KeyPress_1);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(292, 185);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(23, 13);
+            this.label9.Size = new System.Drawing.Size(18, 13);
             this.label9.TabIndex = 32;
-            this.label9.Text = "Nic";
+            this.label9.Text = "ID";
             // 
             // textBox13
             // 
@@ -182,16 +185,16 @@
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(135, 20);
             this.textBox13.TabIndex = 31;
-            this.textBox13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox13_KeyPress);
+            this.textBox13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox16_KeyPress_1);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(292, 154);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(23, 13);
+            this.label13.Size = new System.Drawing.Size(18, 13);
             this.label13.TabIndex = 30;
-            this.label13.Text = "Nic";
+            this.label13.Text = "ID";
             // 
             // textBox14
             // 
@@ -199,16 +202,16 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(135, 20);
             this.textBox14.TabIndex = 29;
-            this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox14_KeyPress);
+            this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox16_KeyPress_1);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(292, 124);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(23, 13);
+            this.label14.Size = new System.Drawing.Size(18, 13);
             this.label14.TabIndex = 28;
-            this.label14.Text = "Nic";
+            this.label14.Text = "ID";
             // 
             // textBox15
             // 
@@ -216,16 +219,16 @@
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(135, 20);
             this.textBox15.TabIndex = 27;
-            this.textBox15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox15_KeyPress);
+            this.textBox15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox16_KeyPress_1);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(292, 93);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(23, 13);
+            this.label15.Size = new System.Drawing.Size(18, 13);
             this.label15.TabIndex = 26;
-            this.label15.Text = "Nic";
+            this.label15.Text = "ID";
             // 
             // textBox16
             // 
@@ -233,16 +236,16 @@
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(135, 20);
             this.textBox16.TabIndex = 25;
-            this.textBox16.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox16_KeyPress);
+            this.textBox16.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox16_KeyPress_1);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(292, 63);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(23, 13);
+            this.label16.Size = new System.Drawing.Size(18, 13);
             this.label16.TabIndex = 24;
-            this.label16.Text = "Nic";
+            this.label16.Text = "ID";
             // 
             // textBox7
             // 
@@ -485,6 +488,16 @@
             this.label25.TabIndex = 45;
             this.label25.Text = "Update Litre";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(853, 414);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 57;
+            this.pictureBox1.TabStop = false;
+            // 
             // UpdateRecordsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -497,6 +510,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button7);
+            this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "UpdateRecordsPage";
             this.Text = "UpdateRecordsPage";
             this.Load += new System.EventHandler(this.UpdateRecordsPage_Load);
@@ -504,6 +519,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -554,5 +570,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -36,7 +36,7 @@ namespace Erp_Petrolpump_Management
                 frommail = textBox3.Text;
                 tomail = textBox4.Text;
                 pswrd = textBox5.Text;
-                if (frommail.IndexOf('@') == -1 || frommail.IndexOf('.') == -1)
+                if (!frommail.Contains("@") || frommail.Contains(".com"))
                 {
                     MessageBox.Show("invalid email type correct");
                     textBox3.Clear();
@@ -57,6 +57,7 @@ namespace Erp_Petrolpump_Management
                 smt.Port = 587;
                 smt.Credentials = new System.Net.NetworkCredential("SYED BAKHTIYAR", pswrd);
                 smt.EnableSsl = true;
+                count++;
                 smt.Send(ms);
                 MessageBox.Show("send");
             }
@@ -85,6 +86,11 @@ namespace Erp_Petrolpump_Management
         private void FaxPageForOrdered_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
