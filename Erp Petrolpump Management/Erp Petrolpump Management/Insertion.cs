@@ -384,10 +384,10 @@ namespace Erp_Petrolpump_Management
             double totalp = sale * purchase;
             stock = qnty - sale;
             double tpr = purchase * qnty;
-            if(sale<qnty){
+            
             try
             {
-                OleDbCommand cmd = new OleDbCommand("INSERT into Oil(Dates, ProductName, Price, quantity, Salling, TotalBud, Stock, datetm) Values('" + dtm + "', '" + prname + "', '" + tpr + "','" + qnty + "', '"+sale+"', '" + totalp + "', '"+stock+"','"+dttm+"')", con);
+                OleDbCommand cmd = new OleDbCommand("INSERT into Oil(Dates, ProductName, Price, quantity, Salling, TotalBud, Stock, datetm) Values('" + dtm + "', '" + prname + "', '" + tpr + "','" + (qnty*12) + "', '"+sale+"', '" + totalp + "', '"+stock+"','"+dttm+"')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Inserted");
@@ -403,11 +403,7 @@ namespace Erp_Petrolpump_Management
             {
                 MessageBox.Show("Date must be diffrent from others :/ Got it?");
             }
-            }
-            else{
-                MessageBox.Show("Itna stock ni he jitna tu bechna chahta hey dubara Sahi likh");
-                textBox13.Clear();
-            }
+            
         }
 
         private void button6_Click(object sender, EventArgs e)

@@ -419,6 +419,7 @@
             this.textBox28.Name = "textBox28";
             this.textBox28.Size = new System.Drawing.Size(80, 20);
             this.textBox28.TabIndex = 55;
+            this.textBox28.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox28_KeyPress_1);
             // 
             // label28
             // 
