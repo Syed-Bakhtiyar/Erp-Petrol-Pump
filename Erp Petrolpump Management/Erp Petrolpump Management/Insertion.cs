@@ -70,6 +70,13 @@ namespace Erp_Petrolpump_Management
                 salary = Double.Parse(textBox3.Text);
                 
                 arr[0] = 1;
+                if (salary < 0 || salary > 300)
+                {
+                    arr[0] = 0;
+                }
+                else {
+                    arr[0] = 1;
+                }
             }
             catch (Exception ex) { }
 
@@ -113,7 +120,7 @@ namespace Erp_Petrolpump_Management
             
             
             if(arr[0]==0){
-                MessageBox.Show("Enter Correct Salary");
+                MessageBox.Show("Enter Correct Salary or greater than 300 is not valid");
                 textBox3.Clear();
             }
             if (arr[1] == 0)

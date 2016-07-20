@@ -634,5 +634,32 @@ namespace Erp_Petrolpump_Management
         {
 
         }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            int id, quant,sale,price, pur,stock;
+            string dtm = DateTime.Now.ToLongDateString();
+
+            string name;
+           try
+            {
+                id=Int32.Parse(textBox2.Text);
+                quant = Int32.Parse(textBox5.Text);
+                sale = Int32.Parse(textBox4.Text);
+                name = textBox1.Text;
+                price = Int16.Parse(textBox3.Text);
+               // pur = int.Parse(textBox6.Text);
+               stock = (quant*12)-sale;
+                OleDbCommand cmd = new OleDbCommand("Update Oil set ProductName='"+name+"', Price='"+price+"', quantity='"+(quant*12)+"', Salling ="+sale+", TotalBud ="+(sale*price)+", Stock="+stock+", datetm='"+dtm+"' where Dates="+id+"",con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex) 
+           {
+               MessageBox.Show(ex.ToString());  
+            
+           }
+        }
     }
 }

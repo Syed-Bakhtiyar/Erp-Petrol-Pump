@@ -46,11 +46,12 @@ namespace Erp_Petrolpump_Management
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string dtm = DateTime.Now.ToLongDateString();
             try {
                 id = Int32.Parse(textBox1.Text);
                 evname = textBox2.Text;
                 expence = double.Parse(textBox3.Text);
-                OleDbCommand cmd = new OleDbCommand("Insert into Events(ID, EventName, Expence) Values("+id+", '"+evname+"', "+expence+")",con);
+                OleDbCommand cmd = new OleDbCommand("Insert into Events(ID, EventName, Expence, datetm) Values("+id+", '"+evname+"', "+expence+", '"+dtm+"')",con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 textBox1.Clear();
@@ -116,11 +117,12 @@ namespace Erp_Petrolpump_Management
 
         private void button5_Click(object sender, EventArgs e)
         {
+            string dtm = DateTime.Now.ToLongDateString();
             try
             {
                 String tx = textBox5.Text;
                 int II = Int32.Parse(textBox6.Text);
-                OleDbCommand upi = new OleDbCommand("UPDATE Events SET EventName ='" + tx + "' WHERE ID=" + II + "", con);
+                OleDbCommand upi = new OleDbCommand("UPDATE Events SET EventName ='" + tx + "', datetm='"+dtm+"' WHERE ID=" + II + "", con);
                 con.Open();
                 upi.ExecuteNonQuery();
                 textBox5.Clear();
@@ -129,17 +131,18 @@ namespace Erp_Petrolpump_Management
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Invalid nic number");
+                MessageBox.Show("Invalid ID number");
             }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            string dtm = DateTime.Now.ToLongDateString();
             try
             {
                 expence = double.Parse(textBox7.Text);
                 int II = Int32.Parse(textBox8.Text);
-                OleDbCommand upi = new OleDbCommand("UPDATE Events SET Expence =" + expence + " WHERE ID=" + II + "", con);
+                OleDbCommand upi = new OleDbCommand("UPDATE Events SET Expence =" + expence + ", datetm='"+dtm+"' WHERE ID=" + II + "", con);
                 con.Open();
                 upi.ExecuteNonQuery();
                 textBox7.Clear();
@@ -148,7 +151,7 @@ namespace Erp_Petrolpump_Management
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Invalid nic number");
+                MessageBox.Show("Invalid ID number");
             }
         }
 
@@ -164,26 +167,18 @@ namespace Erp_Petrolpump_Management
             }
             catch (Exception ex)
             {
-                MessageBox.Show("can't delete ");
+                MessageBox.Show("can't delete, or input mistake ");
             }
         }
 
         private void textBox11_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                MessageBox.Show("Enter please number only");
-                e.KeyChar = (char)0;
-            }
+            
         }
 
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar < '0' || e.KeyChar > '9')
-            {
-                MessageBox.Show("Enter please number only");
-                e.KeyChar = (char)0;
-            }
+            
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -210,7 +205,7 @@ namespace Erp_Petrolpump_Management
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Must Fill Id");
+                MessageBox.Show("Must Fill Id in numbers");
                 textBox4.Clear();
 
 
@@ -230,6 +225,11 @@ namespace Erp_Petrolpump_Management
         }
 
         private void Events_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_KeyPress_1(object sender, KeyPressEventArgs e)
         {
 
         }
