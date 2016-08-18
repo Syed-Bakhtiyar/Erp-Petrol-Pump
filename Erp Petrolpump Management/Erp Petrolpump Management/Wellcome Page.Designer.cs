@@ -61,7 +61,7 @@
             // button12
             // 
             this.button12.Image = global::Erp_Petrolpump_Management.Properties.Resources.pr;
-            this.button12.Location = new System.Drawing.Point(195, 577);
+            this.button12.Location = new System.Drawing.Point(195, 560);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(177, 79);
             this.button12.TabIndex = 13;
@@ -91,7 +91,7 @@
             // button9
             // 
             this.button9.Image = global::Erp_Petrolpump_Management.Properties.Resources.Untitled_81;
-            this.button9.Location = new System.Drawing.Point(379, 577);
+            this.button9.Location = new System.Drawing.Point(379, 560);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(177, 79);
             this.button9.TabIndex = 10;
@@ -111,7 +111,7 @@
             // button7
             // 
             this.button7.Image = global::Erp_Petrolpump_Management.Properties.Resources.Untitled_8;
-            this.button7.Location = new System.Drawing.Point(13, 577);
+            this.button7.Location = new System.Drawing.Point(13, 560);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(177, 79);
             this.button7.TabIndex = 8;
@@ -121,7 +121,7 @@
             // button6
             // 
             this.button6.Image = global::Erp_Petrolpump_Management.Properties.Resources.Untitled_7;
-            this.button6.Location = new System.Drawing.Point(572, 577);
+            this.button6.Location = new System.Drawing.Point(572, 560);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(177, 79);
             this.button6.TabIndex = 7;
@@ -205,7 +205,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 714);
+            this.ClientSize = new System.Drawing.Size(780, 666);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);

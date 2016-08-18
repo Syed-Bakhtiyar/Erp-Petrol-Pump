@@ -59,7 +59,7 @@ namespace Erp_Petrolpump_Management
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            using (TextReader tr = File.OpenText(@"username.txt"))
+            using (TextReader tr = File.OpenText("username.txt"))
             {
                 label1.Text = tr.ReadLine();
 

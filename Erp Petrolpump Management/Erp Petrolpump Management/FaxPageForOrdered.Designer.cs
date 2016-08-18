@@ -135,6 +135,7 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(155, 117);
             this.textBox5.Name = "textBox5";
+            this.textBox5.PasswordChar = '$';
             this.textBox5.Size = new System.Drawing.Size(134, 20);
             this.textBox5.TabIndex = 10;
             // 

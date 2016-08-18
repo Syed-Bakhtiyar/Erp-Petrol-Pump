@@ -389,7 +389,7 @@ namespace Erp_Petrolpump_Management
             }
            
             double totalp = sale * purchase;
-            stock = qnty - sale;
+            stock = (qnty*12) - sale;
             double tpr = purchase * qnty;
             
             try

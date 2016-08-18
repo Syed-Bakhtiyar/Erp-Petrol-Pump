@@ -1,0 +1,27 @@
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\bin\Release\Erp Petrolpump Management.exe.config
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\bin\Release\Database1.accdb
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\bin\Release\Erp Petrolpump Management.exe
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\bin\Release\Erp Petrolpump Management.pdb
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.BossVeiw.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.DeleteCngRecord.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.DeleteDeiselRec.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.DeleteEvents.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.DeleteForm.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.Deleterecordspage.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.DeleteSalling.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.Events.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.FaxPageForOrdered.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.Form1.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.Help.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.Insertion.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.PrintPageForm.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.Properties.Resources.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.SearchEmployDetail.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.UpdateRecordsPage.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.VeiwAll.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp_Petrolpump_Management.Wellcome_Page.resources
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp Petrolpump Management.exe
+C:\Users\Syed Inkisar Ahmed\Desktop\New folder (3)\Erp Petrolpump Management\Erp Petrolpump Management\obj\x86\Release\Erp Petrolpump Management.pdb

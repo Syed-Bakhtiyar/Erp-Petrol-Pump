@@ -36,7 +36,7 @@ namespace Erp_Petrolpump_Management
                 frommail = textBox3.Text;
                 tomail = textBox4.Text;
                 pswrd = textBox5.Text;
-                if (!frommail.Contains("@") || frommail.Contains(".com"))
+                if (!frommail.Contains("@") || !frommail.Contains(".com"))
                 {
                     MessageBox.Show("invalid email type correct");
                     textBox3.Clear();
